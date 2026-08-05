@@ -103,6 +103,7 @@ const Navbar = () => {
               <Image
                 src={logo}
                 alt="About MaxGenSoft Engineering"
+                className="size-6"
 
               />
             </div>
