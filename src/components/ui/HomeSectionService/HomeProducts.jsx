@@ -11,10 +11,10 @@ const HomeProducts = () => {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-600 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-700"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-black opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-black"></span>
               </span>
-              <span className="text-xs font-bold tracking-widest text-amber-800 uppercase">
+              <span className="text-xs font-bold tracking-widest text-black uppercase">
                 Ecosystem Architecture
               </span>
             </div>
@@ -31,7 +31,7 @@ const HomeProducts = () => {
           </div>
           <a
             href="#"
-            className="inline-flex items-center gap-2 text-sm font-bold text-amber-800 hover:text-amber-900 transition-colors group"
+            className="inline-flex items-center gap-2 text-sm font-bold text-black hover:text-amber-900 transition-colors group"
           >
             <span>Explore Full Suite</span>
             <svg
@@ -51,8 +51,8 @@ const HomeProducts = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-          <div className="md:col-span-8 group relative rounded-3xl bg-white/80 backdrop-blur-xl border border-stone-200/80 p-8 md:p-10 hover:border-amber-600/40 hover:shadow-[0_20px_50px_-15px_rgba(217,119,6,0.12)] transition-all duration-500 hover:-translate-y-1.5 overflow-hidden flex flex-col justify-between">
-            <div className="absolute -top-24 -right-24 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl group-hover:bg-amber-500/20 transition-all duration-700 pointer-events-none group-hover:scale-125"></div>
+          <div className="md:col-span-8 group relative rounded-3xl bg-white/80 backdrop-blur-xl border border-stone-200/80  hover:border-stone-400/50 p-8 md:p-10  hover:shadow-[0_20px_50px_-15px_rgba(217,119,6,0.12)] transition-all duration-500 hover:-translate-y-1.5 overflow-hidden flex flex-col justify-between">
+            <div className="absolute -top-24 -right-24 w-72 h-72 bg-stone-400/10 group-hover:bg-stone-400/20 rounded-full blur-3xl  transition-all duration-700 pointer-events-none group-hover:scale-125"></div>
 
             <div>
               <div className="flex items-center justify-between mb-8">
@@ -64,7 +64,7 @@ const HomeProducts = () => {
                   v4.2.0-prod
                 </span>
               </div>
-              <h3 className="text-2xl font-bold text-stone-900 mb-3 group-hover:text-amber-800 transition-colors duration-300">
+              <h3 className="text-2xl font-bold text-stone-900 mb-3 group-hover:text-stone-700 transition-colors duration-300">
                 Nexus Analytics Suite
               </h3>
               <p className="text-stone-600 text-sm leading-relaxed max-w-md">
@@ -86,7 +86,7 @@ const HomeProducts = () => {
               </div>
               <a
                 href="#"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-stone-800 group-hover:text-amber-800 transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-stone-800 group-hover:text-stone-700 transition-colors"
               >
                 <span>Explore Platform</span>
                 <svg
@@ -106,8 +106,8 @@ const HomeProducts = () => {
             </div>
           </div>
 
-          <div className="md:col-span-4 group relative rounded-3xl bg-white/80 backdrop-blur-xl border border-stone-200/80 p-8 md:p-10 hover:border-stone-400/50 hover:shadow-[0_20px_50px_-15px_rgba(120,113,108,0.12)] transition-all duration-500 hover:-translate-y-1.5 overflow-hidden flex flex-col justify-between">
-            <div className="absolute -top-24 -right-24 w-60 h-60 bg-stone-400/10 rounded-full blur-3xl group-hover:bg-stone-400/20 transition-all duration-700 pointer-events-none group-hover:scale-125"></div>
+          <div className="md:col-span-4 group relative rounded-3xl bg-white/80 backdrop-blur-xl border border-stone-200/80  hover:border-stone-400/50  p-8 md:p-10 hover:shadow-[0_20px_50px_-15px_rgba(120,113,108,0.12)] transition-all duration-500 hover:-translate-y-1.5 overflow-hidden flex flex-col justify-between">
+            <div className="absolute -top-24 -right-24 w-60 h-60 bg-stone-400/10 group-hover:bg-stone-400/20 rounded-full blur-3xl  transition-all duration-700 pointer-events-none group-hover:scale-125"></div>
 
             <div>
               <div className="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200/60 flex items-center justify-center text-amber-800 mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-sm">
@@ -160,8 +160,8 @@ const HomeProducts = () => {
             </div>
           </div>
 
-          <div className="md:col-span-5 group relative rounded-3xl bg-white/80 backdrop-blur-xl border border-stone-200/80 p-8 md:p-10 hover:border-amber-700/40 hover:shadow-[0_20px_50px_-15px_rgba(180,83,9,0.12)] transition-all duration-500 hover:-translate-y-1.5 overflow-hidden flex flex-col justify-between">
-            <div className="absolute -top-24 -right-24 w-60 h-60 bg-amber-600/10 rounded-full blur-3xl group-hover:bg-amber-600/20 transition-all duration-700 pointer-events-none group-hover:scale-125"></div>
+          <div className="md:col-span-5 group relative rounded-3xl bg-white/80 backdrop-blur-xl border border-stone-200/80  hover:border-stone-400/50 p-8 md:p-10  hover:shadow-[0_20px_50px_-15px_rgba(180,83,9,0.12)] transition-all duration-500 hover:-translate-y-1.5 overflow-hidden flex flex-col justify-between">
+            <div className="absolute -top-24 -right-24 w-60 h-60 bg-stone-400/10 group-hover:bg-stone-400/20 rounded-full blur-3xl  transition-all duration-700 pointer-events-none group-hover:scale-125"></div>
 
             <div>
               <div className="w-12 h-12 rounded-2xl bg-stone-100 border border-stone-200 flex items-center justify-center text-stone-800 mb-8 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300 shadow-sm">
@@ -179,7 +179,7 @@ const HomeProducts = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-stone-900 mb-3 group-hover:text-amber-900 transition-colors duration-300">
+              <h3 className="text-2xl font-bold text-stone-900 mb-3 group-hover:text-stone-700 transition-colors duration-300">
                 CloudOps Pro
               </h3>
               <p className="text-stone-600 text-sm leading-relaxed">
@@ -194,7 +194,7 @@ const HomeProducts = () => {
               </span>
               <a
                 href="#"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-stone-800 group-hover:text-amber-900 transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-stone-800 group-hover:text-stone-700 transition-colors"
               >
                 <span>Deploy Now</span>
                 <svg
@@ -214,8 +214,8 @@ const HomeProducts = () => {
             </div>
           </div>
 
-          <div className="md:col-span-7 group relative rounded-3xl bg-white/80 backdrop-blur-xl border border-stone-200/80 p-8 md:p-10 hover:border-amber-600/40 hover:shadow-[0_20px_50px_-15px_rgba(217,119,6,0.12)] transition-all duration-500 hover:-translate-y-1.5 overflow-hidden flex flex-col justify-between">
-            <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl group-hover:bg-amber-500/20 transition-all duration-700 pointer-events-none group-hover:scale-125"></div>
+          <div className="md:col-span-7 group relative rounded-3xl bg-white/80 backdrop-blur-xl border border-stone-200/80  hover:border-stone-400/50 p-8 md:p-10  hover:shadow-[0_20px_50px_-15px_rgba(217,119,6,0.12)] transition-all duration-500 hover:-translate-y-1.5 overflow-hidden flex flex-col justify-between">
+            <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-stone-400/10 group-hover:bg-stone-400/20 rounded-full blur-3xl  transition-all duration-700 pointer-events-none group-hover:scale-125"></div>
 
             <svg
               className="absolute -bottom-8 -right-8 w-48 h-48 text-stone-300/30 group-hover:text-amber-600/10 transition-all duration-700 group-hover:rotate-12 group-hover:scale-110 pointer-events-none"
@@ -234,7 +234,7 @@ const HomeProducts = () => {
                   GraphQL / REST API
                 </span>
               </div>
-              <h3 className="text-2xl font-bold text-stone-900 mb-3 group-hover:text-amber-800 transition-colors duration-300">
+              <h3 className="text-2xl font-bold text-stone-900 mb-3 group-hover:text-stone-700 transition-colors duration-300">
                 OmniConnect Gateway
               </h3>
               <p className="text-stone-600 text-sm leading-relaxed max-w-lg">
@@ -255,7 +255,7 @@ const HomeProducts = () => {
               </div>
               <a
                 href="#"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-stone-800 group-hover:text-amber-800 transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-stone-800 group-hover:text-stone-700 transition-colors"
               >
                 <span>View Endpoints</span>
                 <svg
