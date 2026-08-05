@@ -135,7 +135,7 @@ const Navbar = () => {
 
                 {item === "Industries" && (
                   <div
-                    className={`absolute left-1/2 -translate-x-1/2 top-full w-[1050px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-500 ease-in-out origin-top ${
+                    className={`absolute left-1/2 -translate-x-1/2 z-50 mt-6 w-[1060px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-500 ease-in-out origin-top ${
                       activeMenu === "Industries"
                         ? "opacity-100 scale-100 pointer-events-auto"
                         : "opacity-0 scale-95 pointer-events-none"
