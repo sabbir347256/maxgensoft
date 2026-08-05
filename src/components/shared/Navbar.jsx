@@ -182,7 +182,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center">
             <Link
               href="#"
-              className="flex items-center gap-2 px-5 py-2.5 bg-sky-400 hover:bg-sky-500 text-white rounded-full font-medium text-sm transition-all shadow-md hover:shadow-cyan-500/20"
+              className="flex items-center gap-2 px-5 py-2.5 hover:bg-[#A5D4FF] bg-[#2e4c68] hover:text-black text-white rounded-full font-medium text-sm transition-all shadow-md hover:shadow-cyan-500/20"
             >
               Contact Us
               <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-xs">
