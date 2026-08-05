@@ -20,7 +20,7 @@ const HomeProducts = () => {
             </div>
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-stone-900">
               Flagship{" "}
-              <span className="bg-gradient-to-r from-amber-700 via-amber-600 to-stone-700 bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_6s_ease_infinite]">
+              <span className=" text-sky animate-[gradient_6s_ease_infinite]">
                 SaaS Platforms
               </span>
             </h2>

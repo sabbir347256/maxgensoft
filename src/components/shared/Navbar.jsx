@@ -86,11 +86,12 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
-          scrolled
-            ? "bg-slate-900/90 backdrop-blur-md shadow-lg py-1 border-b border-slate-800"
-            : "bg-transparent py-3"
-        }`}
+      className="bg-slate-900/90 "
+        // className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
+        //   scrolled
+        //     ? "bg-slate-900/90 backdrop-blur-md shadow-lg py-1 border-b border-slate-800"
+        //     : "bg-transparent py-3"
+        // }`}
       >
         <div className="container mx-auto px-4 h-15 flex items-center justify-between">
           <Link
