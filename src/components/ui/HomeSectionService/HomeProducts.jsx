@@ -31,7 +31,7 @@ const HomeProducts = () => {
           </div>
           <a
             href="#"
-            className="inline-flex items-center gap-2 text-sm font-bold text-black hover:text-amber-900 transition-colors group"
+            className="inline-flex items-center gap-2 text-sm font-bold text-black hover:transition-colors group"
           >
             <span>Explore Full Suite</span>
             <svg
@@ -56,13 +56,13 @@ const HomeProducts = () => {
 
             <div>
               <div className="flex items-center justify-between mb-8">
-                <span className="px-3 py-1 text-xs font-semibold bg-amber-100/80 text-amber-900 border border-amber-200/60 rounded-full shadow-inner">
+                <span className="px-3 py-1 text-xs font-semibold bg-black text-white border border-amber-200/60 rounded-full shadow-inner">
                   Data Analytics
                 </span>
-                <span className="text-xs font-mono text-stone-500 flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-amber-600"></span>
+                <span className="text-xs font-mono text-stone-500  flex items-center gap-1.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-gray-600"></span>
                   v4.2.0-prod
-                </span>
+                </span> 
               </div>
               <h3 className="text-2xl font-bold text-stone-900 mb-3 group-hover:text-stone-700 transition-colors duration-300">
                 Nexus Analytics Suite
@@ -110,7 +110,7 @@ const HomeProducts = () => {
             <div className="absolute -top-24 -right-24 w-60 h-60 bg-stone-400/10 group-hover:bg-stone-400/20 rounded-full blur-3xl  transition-all duration-700 pointer-events-none group-hover:scale-125"></div>
 
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200/60 flex items-center justify-center text-amber-800 mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-sm">
+              <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-stone-100 border border-stone-200 mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-sm">
                 <svg
                   className="w-6 h-6"
                   fill="none"
@@ -227,7 +227,7 @@ const HomeProducts = () => {
 
             <div>
               <div className="flex items-center justify-between mb-8">
-                <span className="px-3 py-1 text-xs font-semibold bg-amber-100/80 text-amber-900 border border-amber-200/60 rounded-full shadow-inner">
+                <span className="px-3 py-1 text-xs font-semibold bg-black text-white border border-amber-200/60 rounded-full shadow-inner">
                   Integration
                 </span>
                 <span className="text-xs font-mono text-stone-500">
@@ -246,8 +246,8 @@ const HomeProducts = () => {
             <div className="mt-12 pt-6 border-t border-stone-200/80 flex items-center justify-between relative z-10">
               <div className="flex items-center gap-2">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-500 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-600"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gray-600 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-gray-600"></span>
                 </span>
                 <span className="text-xs text-stone-500 font-mono">
                   99.999% Uptime SLA
