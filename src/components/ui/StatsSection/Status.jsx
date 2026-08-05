@@ -62,8 +62,13 @@ const Status = () => {
   ];
   return (
     <section className="relative bg-white py-24 sm:py-32 overflow-hidden text-slate-900 border-t border-slate-100">
-      <div className="absolute inset-0 opacity-[0.15] pointer-events-none">
-        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+      <div className="absolute inset-0 opacity-[0.06] pointer-events-none">
+        <svg
+          className="w-full h-full"
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"
+          height="100%"
+        >
           <defs>
             <pattern
               id="ultra-light-grid"
@@ -75,32 +80,13 @@ const Status = () => {
                 d="M 60 0 L 120 30 L 120 90 L 60 120 L 0 90 L 0 30 Z"
                 fill="none"
                 stroke="#0284c7"
+                strokeWidth="1"
+              />
+              <path
+                d="M 60 0 L 60 120 M 0 30 L 120 90 M 0 90 L 120 30"
+                fill="none"
+                stroke="#0284c7"
                 strokeWidth="0.8"
-                strokeOpacity="0.3"
-              />
-              <path
-                d="M 60 0 L 60 120 M 0 30 L 120 90 M 0 90 L 120 30"
-                fill="none"
-                stroke="#0284c7"
-                strokeWidth="0.6"
-                strokeOpacity="0.2"
-              />
-
-              <path
-                d="M 60 0 L 120 30 L 120 90 L 60 120 L 0 90 L 0 30 Z"
-                fill="none"
-                stroke="#0284c7"
-                strokeWidth="2"
-                strokeDasharray="40 180"
-                className="animate-[dash_6s_linear_infinite]"
-              />
-              <path
-                d="M 60 0 L 60 120 M 0 30 L 120 90 M 0 90 L 120 30"
-                fill="none"
-                stroke="#38bdf8"
-                strokeWidth="1.8"
-                strokeDasharray="30 150"
-                className="animate-[dash_8s_linear_infinite_reverse]"
               />
             </pattern>
           </defs>
@@ -111,7 +97,7 @@ const Status = () => {
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
         <div className="absolute left-[15%] top-0 bottom-0 w-[1px] bg-slate-100/50">
           <div
-            className="w-full h-24 bg-gradient-to-b from-transparent via-sky-400 to-transparent"
+            className="w-full h-24 bg-gradient-to-b from-transparent via-sky-400 to-transparent "
             style={{
               animation: "dropLine 6s infinite linear",
             }}
@@ -120,7 +106,7 @@ const Status = () => {
 
         <div className="absolute left-[38%] top-0 bottom-0 w-[1px] bg-slate-100/50">
           <div
-            className="w-full h-24 bg-gradient-to-b from-transparent via-blue-500 to-transparent"
+            className="w-full h-24 bg-gradient-to-b from-transparent via-blue-500 to-transparent "
             style={{
               animation: "dropLine 8s infinite linear 2s",
             }}
