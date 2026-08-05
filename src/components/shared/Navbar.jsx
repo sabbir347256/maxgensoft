@@ -15,6 +15,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import logo from "../../../public/logo.png";
 
 const Navbar = () => {
   const dropdownData = {
@@ -86,7 +87,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-      className="bg-slate-900/90 "
+        className="bg-slate-900/90 "
         // className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
         //   scrolled
         //     ? "bg-slate-900/90 backdrop-blur-md shadow-lg py-1 border-b border-slate-800"
@@ -98,8 +99,12 @@ const Navbar = () => {
             href="/"
             className="flex items-center gap-2 text-white font-bold text-2xl tracking-wide"
           >
-            <div className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center text-sm">
-              ▲
+            <div className="w-9 h-9 rounded-full border-2 border-white flex items-center justify-center text-sm bg-white">
+              <Image
+                src={logo}
+                alt="About MaxGenSoft Engineering"
+
+              />
             </div>
             MaxGenSoft
           </Link>
