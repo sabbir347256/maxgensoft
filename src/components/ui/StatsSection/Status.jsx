@@ -95,41 +95,60 @@ const Status = () => {
       </div>
 
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        <div className="absolute left-[15%] top-0 bottom-0 w-[1px] bg-slate-100/50">
+        <div className="absolute left-[10%] top-0 bottom-0 w-[1px] bg-slate-100/50">
           <div
-            className="w-full h-24 bg-gradient-to-b from-transparent via-sky-400 to-transparent "
+            className="w-full h-24 bg-gradient-to-b from-transparent via-sky-400 to-transparent"
             style={{
               animation: "dropLine 6s infinite linear",
             }}
           />
         </div>
 
-        <div className="absolute left-[38%] top-0 bottom-0 w-[1px] bg-slate-100/50">
+        <div className="absolute left-[26%] top-0 bottom-0 w-[1px] bg-slate-100/50">
           <div
-            className="w-full h-24 bg-gradient-to-b from-transparent via-blue-500 to-transparent "
+            className="w-full h-24 bg-gradient-to-b from-transparent via-blue-500 to-transparent"
             style={{
               animation: "dropLine 8s infinite linear 2s",
             }}
           />
         </div>
 
-        <div className="absolute left-[62%] top-0 bottom-0 w-[1px] bg-slate-100/50">
+        <div className="absolute left-[42%] top-0 bottom-0 w-[1px] bg-slate-100/50">
           <div
-            className="w-full h-24 bg-gradient-to-b from-transparent via-sky-400 to-transparent "
+            className="w-full h-24 bg-gradient-to-b from-transparent via-sky-400 to-transparent"
             style={{
               animation: "dropLine 5s infinite linear 1s",
             }}
           />
         </div>
 
-        <div className="absolute left-[85%] top-0 bottom-0 w-[1px] bg-slate-100/50">
+        <div className="absolute left-[58%] top-0 bottom-0 w-[1px] bg-slate-100/50">
           <div
-            className="w-full h-24 bg-gradient-to-b from-transparent via-indigo-400 to-transparent "
+            className="w-full h-24 bg-gradient-to-b from-transparent via-indigo-400 to-transparent"
             style={{
               animation: "dropLine 7s infinite linear 3.5s",
             }}
           />
         </div>
+
+        <div className="absolute left-[74%] top-0 bottom-0 w-[1px] bg-slate-100/50">
+          <div
+            className="w-full h-24 bg-gradient-to-b from-transparent via-sky-500 to-transparent"
+            style={{
+              animation: "dropLine 6.5s infinite linear 1.5s",
+            }}
+          />
+        </div>
+
+        <div className="absolute left-[90%] top-0 bottom-0 w-[1px] bg-slate-100/50">
+          <div
+            className="w-full h-24 bg-gradient-to-b from-transparent via-blue-400 to-transparent"
+            style={{
+              animation: "dropLine 5.5s infinite linear 2.8s",
+            }}
+          />
+        </div>
+    
       </div>
 
       <style>{`
