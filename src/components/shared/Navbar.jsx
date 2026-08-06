@@ -307,7 +307,7 @@ const Navbar = () => {
             MaxGenSoft
           </Link>
 
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8 relative">
             {[
               "Industries",
               "Services",
@@ -317,7 +317,7 @@ const Navbar = () => {
             ].map((item) => (
               <div
                 key={item}
-                className="relative py-6"
+                className="py-6"
                 onMouseEnter={() => setActiveMenu(item)}
                 onMouseLeave={() => setActiveMenu("")}
               >
@@ -335,9 +335,10 @@ const Navbar = () => {
                     }`}
                   />
                 </button>
+
                 {item === "Industries" && (
                   <div
-                    className={`absolute left-1/2 -translate-x-1/2 z-50 mt-5 w-[1060px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-300 ease-in-out origin-top ${
+                    className={`absolute -left-68 right-0 mx-auto z-50 top-full w-[1000px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-300 ease-in-out origin-top ${
                       activeMenu === "Industries"
                         ? "opacity-100 scale-100 pointer-events-auto"
                         : "opacity-0 scale-95 pointer-events-none"
@@ -385,32 +386,13 @@ const Navbar = () => {
 
                 {item === "Services" && (
                   <div
-                    className={`absolute left-1/2 -translate-x-1/2 z-50 mt-5 w-[1150px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-300 ease-in-out origin-top ${
+                    className={`absolute -left-68 right-0 mx-auto z-50 top-full w-[1000px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-300 ease-in-out origin-top ${
                       activeMenu === "Services"
                         ? "opacity-100 scale-100 pointer-events-auto"
                         : "opacity-0 scale-95 pointer-events-none"
                     }`}
                   >
                     <div className="grid grid-cols-3 gap-6">
-                      {/* <div className="col-span-1 border-r border-gray-100 pr-4 flex flex-col justify-between">
-                        <div>
-                          <div className="rounded-xl overflow-hidden mb-3 bg-slate-100 h-32 relative">
-                            <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/60 to-transparent z-10" />
-                            <div className="absolute bottom-2 left-2 text-white z-20 font-semibold text-xs">
-                              ADDIE Engineering
-                            </div>
-                          </div>
-                          <h4 className="font-bold text-gray-900 text-base mb-1">
-                            Empowering Innovation
-                          </h4>
-                          <p className="text-xs text-gray-500 leading-relaxed">
-                            Discover ADDIE's expertise in delivering
-                            cutting-edge technology services tailored to your
-                            needs.
-                          </p>
-                        </div>
-                      </div> */}
-
                       <div className="col-span-3 grid grid-cols-3 gap-4">
                         {servicesData.map((sec, idx) => {
                           const Icon = sec.icon;
@@ -450,29 +432,13 @@ const Navbar = () => {
 
                 {item === "Products" && (
                   <div
-                    className={`absolute left-1/2 -translate-x-1/2 z-50 mt-5 w-[1100px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-300 ease-in-out origin-top ${
+                    className={`absolute -left-68 right-0 mx-auto z-50 top-full w-[1000px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-300 ease-in-out origin-top ${
                       activeMenu === "Products"
                         ? "opacity-100 scale-100 pointer-events-auto"
                         : "opacity-0 scale-95 pointer-events-none"
                     }`}
                   >
                     <div className="grid grid-cols-3 gap-6">
-                      {/* <div className="col-span-1 border-r border-gray-100 pr-4">
-                        <div className="rounded-xl overflow-hidden mb-3 bg-slate-100 h-32 relative">
-                          <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/60 to-transparent z-10" />
-                          <div className="absolute bottom-2 left-2 text-white z-20 font-semibold text-xs">
-                            SaaS & Enterprise
-                          </div>
-                        </div>
-                        <h4 className="font-bold text-gray-900 text-base mb-1">
-                          Ready-to-Deploy Excellence
-                        </h4>
-                        <p className="text-xs text-gray-500 leading-relaxed">
-                          Explore ADDIE's off-the-shelf tech products designed
-                          for efficiency and scalability.
-                        </p>
-                      </div> */}
-
                       <div className="col-span-3 grid grid-cols-3 gap-3">
                         {productsData.map((prod, pIdx) => (
                           <Link
@@ -501,29 +467,13 @@ const Navbar = () => {
 
                 {item === "Insights" && (
                   <div
-                    className={`absolute left-1/2 -translate-x-1/2 z-50 mt-5 w-[1150px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-300 ease-in-out origin-top ${
+                    className={`absolute -left-68 right-0 mx-auto z-50 top-full w-[1000px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-300 ease-in-out origin-top ${
                       activeMenu === "Insights"
                         ? "opacity-100 scale-100 pointer-events-auto"
                         : "opacity-0 scale-95 pointer-events-none"
                     }`}
                   >
                     <div className="grid grid-cols-3 gap-6">
-                      {/* <div className="col-span-1 border-r border-gray-100 pr-4">
-                        <div className="rounded-xl overflow-hidden mb-3 bg-slate-100 h-32 relative">
-                          <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/60 to-transparent z-10" />
-                          <div className="absolute bottom-2 left-2 text-white z-20 font-semibold text-xs">
-                            Resource Hub
-                          </div>
-                        </div>
-                        <h4 className="font-bold text-gray-900 text-base mb-1">
-                          Knowledge & Trends
-                        </h4>
-                        <p className="text-xs text-gray-500 leading-relaxed">
-                          Stay ahead with expert insights, case studies, and
-                          thought leadership from ADDIE.
-                        </p>
-                      </div> */}
-
                       <div className="col-span-3 grid grid-cols-2 gap-3">
                         {insightsData.map((ins, iIdx) => {
                           const Icon = ins.icon;
@@ -558,7 +508,7 @@ const Navbar = () => {
 
                 {item === "How We Work" && (
                   <div
-                    className={`absolute left-1/2 -translate-x-1/2 z-50 mt-5 w-[1100px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-300 ease-in-out origin-top ${
+                    className={`absolute -left-68 right-0 mx-auto z-50 top-full w-[1000px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-300 ease-in-out origin-top ${
                       activeMenu === "How We Work"
                         ? "opacity-100 scale-100 pointer-events-auto"
                         : "opacity-0 scale-95 pointer-events-none"
@@ -636,7 +586,7 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-            <Link href='how-we-work'>
+            <Link href="how-we-work">
               <button
                 className={`flex items-center gap-1 text-sm font-medium transition-colors ${
                   scrolled
