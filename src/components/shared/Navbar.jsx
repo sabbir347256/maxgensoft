@@ -248,7 +248,7 @@ const Navbar = () => {
       title: "Staff Augmentation",
       desc: "Agile Workforce for a Winning Edge",
       icon: UserCheck,
-      href: "/how-we-work/staff",
+      href: "/how-we-work/staff-augmentation",
     },
     {
       title: "Project-Based",
@@ -313,7 +313,7 @@ const Navbar = () => {
               "Services",
               "Products",
               "Insights",
-              "How We Work",
+              // "How We Work",
             ].map((item) => (
               <div
                 key={item}
@@ -335,10 +335,9 @@ const Navbar = () => {
                     }`}
                   />
                 </button>
-
                 {item === "Industries" && (
                   <div
-                    className={`absolute left-1/2 -translate-x-1/2 z-50 mt-7 w-[1060px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-300 ease-in-out origin-top ${
+                    className={`absolute left-1/2 -translate-x-1/2 z-50 mt-5 w-[1060px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-300 ease-in-out origin-top ${
                       activeMenu === "Industries"
                         ? "opacity-100 scale-100 pointer-events-auto"
                         : "opacity-0 scale-95 pointer-events-none"
@@ -386,14 +385,14 @@ const Navbar = () => {
 
                 {item === "Services" && (
                   <div
-                    className={`absolute left-1/2 -translate-x-1/2 z-50 mt-7 w-[1150px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-300 ease-in-out origin-top ${
+                    className={`absolute left-1/2 -translate-x-1/2 z-50 mt-5 w-[1150px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-300 ease-in-out origin-top ${
                       activeMenu === "Services"
                         ? "opacity-100 scale-100 pointer-events-auto"
                         : "opacity-0 scale-95 pointer-events-none"
                     }`}
                   >
-                    <div className="grid grid-cols-4 gap-6">
-                      <div className="col-span-1 border-r border-gray-100 pr-4 flex flex-col justify-between">
+                    <div className="grid grid-cols-3 gap-6">
+                      {/* <div className="col-span-1 border-r border-gray-100 pr-4 flex flex-col justify-between">
                         <div>
                           <div className="rounded-xl overflow-hidden mb-3 bg-slate-100 h-32 relative">
                             <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/60 to-transparent z-10" />
@@ -410,7 +409,7 @@ const Navbar = () => {
                             needs.
                           </p>
                         </div>
-                      </div>
+                      </div> */}
 
                       <div className="col-span-3 grid grid-cols-3 gap-4">
                         {servicesData.map((sec, idx) => {
@@ -451,14 +450,14 @@ const Navbar = () => {
 
                 {item === "Products" && (
                   <div
-                    className={`absolute left-1/2 -translate-x-1/2 z-50 mt-7 w-[1100px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-300 ease-in-out origin-top ${
+                    className={`absolute left-1/2 -translate-x-1/2 z-50 mt-5 w-[1100px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-300 ease-in-out origin-top ${
                       activeMenu === "Products"
                         ? "opacity-100 scale-100 pointer-events-auto"
                         : "opacity-0 scale-95 pointer-events-none"
                     }`}
                   >
-                    <div className="grid grid-cols-4 gap-6">
-                      <div className="col-span-1 border-r border-gray-100 pr-4">
+                    <div className="grid grid-cols-3 gap-6">
+                      {/* <div className="col-span-1 border-r border-gray-100 pr-4">
                         <div className="rounded-xl overflow-hidden mb-3 bg-slate-100 h-32 relative">
                           <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/60 to-transparent z-10" />
                           <div className="absolute bottom-2 left-2 text-white z-20 font-semibold text-xs">
@@ -472,7 +471,7 @@ const Navbar = () => {
                           Explore ADDIE's off-the-shelf tech products designed
                           for efficiency and scalability.
                         </p>
-                      </div>
+                      </div> */}
 
                       <div className="col-span-3 grid grid-cols-3 gap-3">
                         {productsData.map((prod, pIdx) => (
@@ -502,14 +501,14 @@ const Navbar = () => {
 
                 {item === "Insights" && (
                   <div
-                    className={`absolute left-1/2 -translate-x-1/2 z-50 mt-7 w-[1150px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-300 ease-in-out origin-top ${
+                    className={`absolute left-1/2 -translate-x-1/2 z-50 mt-5 w-[1150px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-300 ease-in-out origin-top ${
                       activeMenu === "Insights"
                         ? "opacity-100 scale-100 pointer-events-auto"
                         : "opacity-0 scale-95 pointer-events-none"
                     }`}
                   >
-                    <div className="grid grid-cols-4 gap-6">
-                      <div className="col-span-1 border-r border-gray-100 pr-4">
+                    <div className="grid grid-cols-3 gap-6">
+                      {/* <div className="col-span-1 border-r border-gray-100 pr-4">
                         <div className="rounded-xl overflow-hidden mb-3 bg-slate-100 h-32 relative">
                           <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/60 to-transparent z-10" />
                           <div className="absolute bottom-2 left-2 text-white z-20 font-semibold text-xs">
@@ -523,7 +522,7 @@ const Navbar = () => {
                           Stay ahead with expert insights, case studies, and
                           thought leadership from ADDIE.
                         </p>
-                      </div>
+                      </div> */}
 
                       <div className="col-span-3 grid grid-cols-2 gap-3">
                         {insightsData.map((ins, iIdx) => {
@@ -559,7 +558,7 @@ const Navbar = () => {
 
                 {item === "How We Work" && (
                   <div
-                    className={`absolute left-1/2 -translate-x-1/2 z-50 mt-7 w-[1100px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-300 ease-in-out origin-top ${
+                    className={`absolute left-1/2 -translate-x-1/2 z-50 mt-5 w-[1100px] bg-white rounded-2xl shadow-2xl p-6 transition-all duration-300 ease-in-out origin-top ${
                       activeMenu === "How We Work"
                         ? "opacity-100 scale-100 pointer-events-auto"
                         : "opacity-0 scale-95 pointer-events-none"
@@ -637,6 +636,17 @@ const Navbar = () => {
                 )}
               </div>
             ))}
+            <Link href='how-we-work'>
+              <button
+                className={`flex items-center gap-1 text-sm font-medium transition-colors ${
+                  scrolled
+                    ? "text-slate-200 hover:text-sky-400"
+                    : "text-white hover:text-cyan-400 cursor-pointer"
+                }`}
+              >
+                How We Work
+              </button>
+            </Link>
           </div>
 
           <div className="hidden lg:flex items-center">
