@@ -22,7 +22,7 @@ const HeroSection = () => {
       icon: Compass,
       tags: ["Tech Audit", "Roadmap", "Scope Definition"],
       cardBg:
-        "bg-[#131b26] border-slate-800 text-white hover:border-sky-500/50",
+        "bg-[#1e2838] border-slate-800 text-white hover:border-sky-500/50",
       accentColor: "bg-sky-500/10 text-sky-400 border-sky-500/20",
       numColor: "text-slate-700 group-hover:text-sky-400",
       tagBg: "bg-slate-900 text-slate-300 border border-slate-800",
@@ -34,7 +34,7 @@ const HeroSection = () => {
       icon: Code2,
       tags: ["CI/CD", "Modular Code", "Agile Sprints"],
       cardBg:
-        "bg-slate-900 border-slate-800 text-white hover:border-sky-400/50",
+        "bg-[#1e2838] border-slate-800 text-white hover:border-sky-400/50",
       accentColor: "bg-sky-400/10 text-sky-300 border-sky-400/20",
       numColor: "text-slate-700 group-hover:text-sky-300",
       tagBg: "bg-[#131b26] text-slate-300 border border-slate-800",
@@ -58,7 +58,7 @@ const HeroSection = () => {
       icon: Rocket,
       tags: ["Multi-Cloud", "DevOps", "24/7 Monitoring"],
       cardBg:
-        "bg-[#182335] border-slate-700 text-white hover:border-sky-400/60",
+        "bg-[#1e2838] border-slate-700 text-white hover:border-sky-400/60",
       accentColor: "bg-sky-500/20 text-sky-200 border-sky-400/30",
       numColor: "text-slate-600 group-hover:text-sky-200",
       tagBg: "bg-slate-900 text-slate-200 border border-slate-700",
@@ -91,8 +91,8 @@ const HeroSection = () => {
         }
       `}</style>
 
-      <section className="relative bg-[#5e6a86] py-24 px-4 border-b border-slate-800/80">
-        <div className="absolute inset-0 bg-gradient-to-r from-[##575D6B]/95 via-[##575D6B]/80 to-[##575D6B]/60 z-0" />
+      <section className="relative bg-blue-500 py-24 px-4 border-b border-slate-800/80">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-[#060b19]/60 to-blue-900 z-0" />
 
         <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-50 z-0 animate-grid-float">
           <svg
@@ -210,7 +210,7 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <section className="relative bg-[#F6F2EA] py-24 px-4 border-b border-slate-800/80">
+      <section className="relative bg-whte py-24 px-4 border-b border-slate-800/80">
         <div className="absolute inset-0 pointer-events-none opacity-40 z-0 animate-grid-float">
           <svg
             className="w-full h-full"
@@ -218,7 +218,7 @@ const HeroSection = () => {
             preserveAspectRatio="none"
             fill="none"
           >
-            <g stroke="#000000" strokeWidth="1">
+            <g stroke="#60a5fa" strokeWidth="1">
               <path
                 d="M 0 100 L 400 250 L 400 600"
                 fill="none"
@@ -244,10 +244,10 @@ const HeroSection = () => {
 
         <div className="container mx-auto max-w-6xl relative z-10 space-y-12">
           <div className="text-center space-y-3">
-            <h2 className="text-2xl md:text-4xl font-bold text-black">
+            <h2 className="text-2xl md:text-4xl font-bold text-white">
               How We Deliver Success
             </h2>
-            <p className="text-slate-600 text-sm md:text-base max-w-xl mx-auto">
+            <p className="text-slate-400 text-sm md:text-base max-w-xl mx-auto">
               Our end-to-end framework guarantees seamless integration,
               bulletproof security, and modern tech stack deployment.
             </p>
@@ -261,8 +261,6 @@ const HeroSection = () => {
                   key={idx}
                   className={`p-6 rounded-2xl border transition-all duration-500 ease-out flex flex-col justify-between group relative overflow-hidden shadow-xl transform hover:-translate-y-2 ${step.cardBg}`}
                 >
-                  <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-sky-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
                   <div>
                     <div className="flex items-center justify-between mb-6">
                       <div

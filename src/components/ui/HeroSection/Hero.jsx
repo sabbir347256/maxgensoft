@@ -10,7 +10,7 @@ const Hero = () => {
         priority
         className="object-cover object-center"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/75 to-slate-900/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-900/75 to-slate-900/20" />
 
       <div className="relative container  pt-20 z-10 w-full">
         <div className="max-w-3xl">
