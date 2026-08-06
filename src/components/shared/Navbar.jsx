@@ -248,7 +248,7 @@ const Navbar = () => {
       title: "Staff Augmentation",
       desc: "Agile Workforce for a Winning Edge",
       icon: UserCheck,
-      href: "/how-we-work/staff-",
+      href: "/how-we-work/staff",
     },
     {
       title: "Project-Based",
