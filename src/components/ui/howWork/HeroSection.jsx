@@ -92,7 +92,7 @@ const HeroSection = () => {
       `}</style>
 
       <section className="relative bg-[#5e6a86] py-24 px-4 border-b border-slate-800/80">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#030712]/95 via-[#060b19]/80 to-[#060b19]/60 z-0" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[##575D6B]/95 via-[##575D6B]/80 to-[##575D6B]/60 z-0" />
 
         <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-50 z-0 animate-grid-float">
           <svg
@@ -210,7 +210,7 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <section className="relative bg-white py-24 px-4 border-b border-slate-800/80">
+      <section className="relative bg-[#F6F2EA] py-24 px-4 border-b border-slate-800/80">
         <div className="absolute inset-0 pointer-events-none opacity-40 z-0 animate-grid-float">
           <svg
             className="w-full h-full"
