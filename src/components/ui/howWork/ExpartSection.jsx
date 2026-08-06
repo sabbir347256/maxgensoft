@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React from "react";
 import {
@@ -93,7 +93,7 @@ const ExpartSection = () => {
     },
   ];
   return (
-  <section className="relative w-full bg-[#E8EDF2] text-slate-800 overflow-hidden py-24 px-4 sm:px-6 lg:px-8">
+    <section className="relative w-full bg-white text-slate-800 overflow-hidden py-24 px-4 sm:px-6 lg:px-8">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-amber-200/30 rounded-full blur-[150px] animate-pulse" />
         <div className="absolute top-2/3 right-1/4 w-[600px] h-[400px] bg-blue-300/20 rounded-full blur-[140px] animate-pulse" />
@@ -106,17 +106,62 @@ const ExpartSection = () => {
                 height="200"
                 patternUnits="userSpaceOnUse"
               >
-                <line x1="0" y1="100" x2="240" y2="20" stroke="#d9d0c1" strokeWidth="1" />
-                <line x1="0" y1="200" x2="240" y2="120" stroke="#d9d0c1" strokeWidth="1" />
-                <line x1="120" y1="60" x2="120" y2="160" stroke="#d9d0c1" strokeWidth="1" />
-                <line x1="240" y1="20" x2="240" y2="120" stroke="#d9d0c1" strokeWidth="1" strokeDasharray="4,4" />
-                
-                <path d="M 60 80 L 180 40 L 180 140" fill="none" stroke="#cbbd9a" strokeWidth="1.2" opacity="0.6" />
-                <path d="M -60 180 L 60 140 L 60 240" fill="none" stroke="#cbbd9a" strokeWidth="1.2" opacity="0.6" />
+                <line
+                  x1="0"
+                  y1="100"
+                  x2="240"
+                  y2="20"
+                  stroke="#d9d0c1"
+                  strokeWidth="1"
+                />
+                <line
+                  x1="0"
+                  y1="200"
+                  x2="240"
+                  y2="120"
+                  stroke="#d9d0c1"
+                  strokeWidth="1"
+                />
+                <line
+                  x1="120"
+                  y1="60"
+                  x2="120"
+                  y2="160"
+                  stroke="#d9d0c1"
+                  strokeWidth="1"
+                />
+                <line
+                  x1="240"
+                  y1="20"
+                  x2="240"
+                  y2="120"
+                  stroke="#d9d0c1"
+                  strokeWidth="1"
+                  strokeDasharray="4,4"
+                />
+
+                <path
+                  d="M 60 80 L 180 40 L 180 140"
+                  fill="none"
+                  stroke="#cbbd9a"
+                  strokeWidth="1.2"
+                  opacity="0.6"
+                />
+                <path
+                  d="M -60 180 L 60 140 L 60 240"
+                  fill="none"
+                  stroke="#cbbd9a"
+                  strokeWidth="1.2"
+                  opacity="0.6"
+                />
               </pattern>
             </defs>
 
-            <rect width="100%" height="100%" fill="url(#geometric-line-pattern)" />
+            <rect
+              width="100%"
+              height="100%"
+              fill="url(#geometric-line-pattern)"
+            />
           </svg>
         </div>
       </div>
@@ -127,7 +172,8 @@ const ExpartSection = () => {
             Our <span className="text-[#2b58b8]">Experts</span>
           </h2>
           <p className="text-slate-600 text-base sm:text-lg">
-            Empowering your digital transformation with our specialized tech professionals.
+            Empowering your digital transformation with our specialized tech
+            professionals.
           </p>
         </div>
 

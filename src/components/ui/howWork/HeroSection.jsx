@@ -11,6 +11,7 @@ import {
   CheckCircle2,
   ArrowRight,
   Zap,
+  Sparkles,
 } from "lucide-react";
 
 const HeroSection = () => {
@@ -91,7 +92,7 @@ const HeroSection = () => {
         }
       `}</style>
 
-      <section className="relative bg-blue-500 py-24 px-4 border-b border-slate-800/80">
+      <section className="relative bg-white py-24 px-4 border-b border-slate-800/80">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-[#060b19]/60 to-blue-900 z-0" />
 
         <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-50 z-0 animate-grid-float">
@@ -210,84 +211,167 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <section className="relative bg-whte py-24 px-4 border-b border-slate-800/80">
-        <div className="absolute inset-0 pointer-events-none opacity-40 z-0 animate-grid-float">
+      <section className="relative bg-[#F2F6FA] py-28 px-4 border-b border-slate-200/80 overflow-hidden">
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-blue-400/15 rounded-full blur-[140px] pointer-events-none animate-pulse" />
+        <div className="absolute bottom-10 right-10 w-[500px] h-[300px] bg-amber-300/15 rounded-full blur-[120px] pointer-events-none animate-pulse" />
+        <div className="absolute inset-0 opacity-[0.06] pointer-events-none">
           <svg
             className="w-full h-full"
-            viewBox="0 0 1000 600"
-            preserveAspectRatio="none"
-            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            height="100%"
           >
-            <g stroke="#60a5fa" strokeWidth="1">
-              <path
-                d="M 0 100 L 400 250 L 400 600"
-                fill="none"
-                opacity="0.4"
-                className="animate-line-glow"
-              />
-              <path
-                d="M 200 0 L 200 280 L 800 50 L 800 600"
-                fill="none"
-                opacity="0.3"
-                className="animate-dash-flow"
-              />
-              <path
-                d="M 500 200 L 950 350 L 950 600"
-                fill="none"
-                opacity="0.5"
-              />
-              <line x1="880" y1="0" x2="880" y2="600" opacity="0.2" />
-              <line x1="940" y1="0" x2="940" y2="600" opacity="0.2" />
-            </g>
+            <defs>
+              <pattern
+                id="ultra-light-grid"
+                width="120"
+                height="120"
+                patternUnits="userSpaceOnUse"
+              >
+                <path
+                  d="M 60 0 L 120 30 L 120 90 L 60 120 L 0 90 L 0 30 Z"
+                  fill="none"
+                  stroke="#0284c7"
+                  strokeWidth="1"
+                />
+                <path
+                  d="M 60 0 L 60 120 M 0 30 L 120 90 M 0 90 L 120 30"
+                  fill="none"
+                  stroke="#0284c7"
+                  strokeWidth="0.8"
+                />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#ultra-light-grid)" />
           </svg>
         </div>
 
-        <div className="container mx-auto max-w-6xl relative z-10 space-y-12">
-          <div className="text-center space-y-3">
-            <h2 className="text-2xl md:text-4xl font-bold text-white">
-              How We Deliver Success
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+          <div className="absolute left-[10%] top-0 bottom-0 w-[1px] bg-slate-100/50">
+            <div
+              className="w-full h-24 bg-gradient-to-b from-transparent via-sky-400 to-transparent"
+              style={{
+                animation: "dropLine 6s infinite linear",
+              }}
+            />
+          </div>
+
+          <div className="absolute left-[26%] top-0 bottom-0 w-[1px] bg-slate-100/50">
+            <div
+              className="w-full h-24 bg-gradient-to-b from-transparent via-blue-500 to-transparent"
+              style={{
+                animation: "dropLine 8s infinite linear 2s",
+              }}
+            />
+          </div>
+
+          <div className="absolute left-[42%] top-0 bottom-0 w-[1px] bg-slate-100/50">
+            <div
+              className="w-full h-24 bg-gradient-to-b from-transparent via-sky-400 to-transparent"
+              style={{
+                animation: "dropLine 5s infinite linear 1s",
+              }}
+            />
+          </div>
+
+          <div className="absolute left-[58%] top-0 bottom-0 w-[1px] bg-slate-100/50">
+            <div
+              className="w-full h-24 bg-gradient-to-b from-transparent via-indigo-400 to-transparent"
+              style={{
+                animation: "dropLine 7s infinite linear 3.5s",
+              }}
+            />
+          </div>
+
+          <div className="absolute left-[74%] top-0 bottom-0 w-[1px] bg-slate-100/50">
+            <div
+              className="w-full h-24 bg-gradient-to-b from-transparent via-sky-500 to-transparent"
+              style={{
+                animation: "dropLine 6.5s infinite linear 1.5s",
+              }}
+            />
+          </div>
+
+          <div className="absolute left-[90%] top-0 bottom-0 w-[1px] bg-slate-100/50">
+            <div
+              className="w-full h-24 bg-gradient-to-b from-transparent via-blue-400 to-transparent"
+              style={{
+                animation: "dropLine 5.5s infinite linear 2.8s",
+              }}
+            />
+          </div>
+        </div>
+
+        <style>{`
+        @keyframes dropLine {
+          0% {
+            transform: translateY(-100%);
+            opacity: 0;
+          }
+          15% {
+            opacity: 1;
+          }
+          85% {
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(800%);
+            opacity: 0;
+          }
+        }
+      `}</style>
+
+        <div className="container mx-auto max-w-7xl relative z-10 space-y-16">
+          <div className="text-center space-y-4 max-w-2xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-[#2b58b8] text-xs font-semibold tracking-wide uppercase shadow-sm">
+              <Sparkles className="w-3.5 h-3.5" /> Our Workflow
+            </div>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+              How We Deliver <span className="text-[#2b58b8]">Success</span>
             </h2>
-            <p className="text-slate-400 text-sm md:text-base max-w-xl mx-auto">
+            <p className="text-slate-600 text-sm md:text-base leading-relaxed">
               Our end-to-end framework guarantees seamless integration,
               bulletproof security, and modern tech stack deployment.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, idx) => {
               const Icon = step.icon;
               return (
                 <div
                   key={idx}
-                  className={`p-6 rounded-2xl border transition-all duration-500 ease-out flex flex-col justify-between group relative overflow-hidden shadow-xl transform hover:-translate-y-2 ${step.cardBg}`}
+                  className={`group relative p-7 rounded-3xl border border-white/80 bg-white/70 backdrop-blur-xl transition-all duration-500 ease-out flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(43,88,184,0.12)] hover:border-[#2b58b8]/30 hover:-translate-y-2 overflow-hidden ${step.cardBg || ""}`}
                 >
+                  <div className="absolute top-0 right-0 -mr-8 -mt-8 w-24 h-24 bg-gradient-to-br from-[#2b58b8]/10 to-transparent rounded-full blur-xl group-hover:scale-150 transition-transform duration-500" />
+
                   <div>
-                    <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center justify-between mb-8">
                       <div
-                        className={`w-12 h-12 rounded-xl border flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 ${step.accentColor}`}
+                        className={`w-14 h-14 rounded-2xl border border-blue-100/80 bg-gradient-to-br from-blue-50 to-white flex items-center justify-center text-[#2b58b8] shadow-sm group-hover:scale-110 group-hover:bg-[#2b58b8] group-hover:text-white group-hover:border-[#2b58b8] transition-all duration-500 ${step.accentColor || ""}`}
                       >
-                        <Icon className="w-6 h-6" />
+                        <Icon className="w-7 h-7" />
                       </div>
                       <span
-                        className={`text-2xl font-black font-mono transition-colors duration-300 ${step.numColor}`}
+                        className={`text-3xl font-black font-mono text-slate-300 group-hover:text-[#2b58b8] transition-colors duration-300 ${step.numColor || ""}`}
                       >
                         {step.num}
                       </span>
                     </div>
 
-                    <h3 className="text-lg font-bold text-white mb-2 transition-colors duration-300 group-hover:text-sky-300">
+                    <h3 className="text-xl font-bold text-slate-900 mb-3 transition-colors duration-300 group-hover:text-[#2b58b8]">
                       {step.title}
                     </h3>
-                    <p className="text-xs text-slate-300 leading-relaxed mb-6">
+                    <p className="text-xs text-slate-600 leading-relaxed mb-8">
                       {step.desc}
                     </p>
                   </div>
 
-                  <div className="flex flex-wrap gap-1.5 pt-4 border-t border-white/10">
-                    {step.tags.map((tag, tIdx) => (
+                  <div className="flex flex-wrap gap-2 pt-5 border-t border-slate-200/60">
+                    {step.tags?.map((tag, tIdx) => (
                       <span
                         key={tIdx}
-                        className={`text-[10px] font-medium px-2 py-1 rounded-md transition-all duration-300 hover:scale-105 ${step.tagBg}`}
+                        className={`text-[11px] font-semibold px-2.5 py-1 rounded-lg bg-blue-50/80 text-[#2b58b8] border border-blue-100/80 transition-all duration-300 hover:bg-[#2b58b8] hover:text-white hover:border-[#2b58b8] ${step.tagBg || ""}`}
                       >
                         {tag}
                       </span>
@@ -300,45 +384,136 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <section className="relative bg-gradient-to-b from-[#050914] to-[#030712] py-20 px-4">
-        <div className="absolute inset-0 pointer-events-none opacity-35 z-0 animate-grid-float">
+      <section className="relative bg-[#F2F6FA] py-24 px-4 overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.06] pointer-events-none">
           <svg
             className="w-full h-full"
-            viewBox="0 0 1000 400"
-            preserveAspectRatio="none"
-            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            height="100%"
           >
-            <g stroke="#38bdf8" strokeWidth="1">
-              <path
-                d="M 100 0 L 100 200 L 900 100 L 900 400"
-                fill="none"
-                opacity="0.4"
-                className="animate-dash-flow"
-              />
-              <path d="M 300 0 L 300 400" fill="none" opacity="0.2" />
-              <path d="M 700 0 L 700 400" fill="none" opacity="0.2" />
-            </g>
+            <defs>
+              <pattern
+                id="ultra-light-grid"
+                width="120"
+                height="120"
+                patternUnits="userSpaceOnUse"
+              >
+                <path
+                  d="M 60 0 L 120 30 L 120 90 L 60 120 L 0 90 L 0 30 Z"
+                  fill="none"
+                  stroke="#0284c7"
+                  strokeWidth="1"
+                />
+                <path
+                  d="M 60 0 L 60 120 M 0 30 L 120 90 M 0 90 L 120 30"
+                  fill="none"
+                  stroke="#0284c7"
+                  strokeWidth="0.8"
+                />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#ultra-light-grid)" />
           </svg>
         </div>
 
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="p-8 md:p-12 rounded-3xl bg-[#091122] border border-slate-800 text-center space-y-6 relative overflow-hidden shadow-2xl transition-all duration-500 hover:border-sky-500/40">
-            <div className="absolute top-0 right-0 w-80 h-80 bg-sky-500/10 rounded-full blur-3xl pointer-events-none animate-pulse" />
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+          <div className="absolute left-[10%] top-0 bottom-0 w-[1px] bg-slate-100/50">
+            <div
+              className="w-full h-24 bg-gradient-to-b from-transparent via-sky-400 to-transparent"
+              style={{
+                animation: "dropLine 6s infinite linear",
+              }}
+            />
+          </div>
 
-            <h3 className="text-2xl md:text-3xl font-bold text-white">
-              Ready to Build Your Industrial IT Infrastructure?
-            </h3>
-            <p className="text-slate-300 text-xs md:text-sm max-w-2xl mx-auto leading-relaxed">
-              Let’s discuss your architecture, software requirements, or digital
-              transformation vision with our technical experts.
-            </p>
-            <div className="pt-2">
+          <div className="absolute left-[26%] top-0 bottom-0 w-[1px] bg-slate-100/50">
+            <div
+              className="w-full h-24 bg-gradient-to-b from-transparent via-blue-500 to-transparent"
+              style={{
+                animation: "dropLine 8s infinite linear 2s",
+              }}
+            />
+          </div>
+
+          <div className="absolute left-[42%] top-0 bottom-0 w-[1px] bg-slate-100/50">
+            <div
+              className="w-full h-24 bg-gradient-to-b from-transparent via-sky-400 to-transparent"
+              style={{
+                animation: "dropLine 5s infinite linear 1s",
+              }}
+            />
+          </div>
+
+          <div className="absolute left-[58%] top-0 bottom-0 w-[1px] bg-slate-100/50">
+            <div
+              className="w-full h-24 bg-gradient-to-b from-transparent via-indigo-400 to-transparent"
+              style={{
+                animation: "dropLine 7s infinite linear 3.5s",
+              }}
+            />
+          </div>
+
+          <div className="absolute left-[74%] top-0 bottom-0 w-[1px] bg-slate-100/50">
+            <div
+              className="w-full h-24 bg-gradient-to-b from-transparent via-sky-500 to-transparent"
+              style={{
+                animation: "dropLine 6.5s infinite linear 1.5s",
+              }}
+            />
+          </div>
+
+          <div className="absolute left-[90%] top-0 bottom-0 w-[1px] bg-slate-100/50">
+            <div
+              className="w-full h-24 bg-gradient-to-b from-transparent via-blue-400 to-transparent"
+              style={{
+                animation: "dropLine 5.5s infinite linear 2.8s",
+              }}
+            />
+          </div>
+        </div>
+
+        <style>{`
+        @keyframes dropLine {
+          0% {
+            transform: translateY(-100%);
+            opacity: 0;
+          }
+          15% {
+            opacity: 1;
+          }
+          85% {
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(800%);
+            opacity: 0;
+          }
+        }
+      `}</style>
+
+        <div className="container mx-auto max-w-5xl relative z-10">
+          <div className="p-10 md:p-16 rounded-[2.5rem] bg-gradient-to-br from-white via-white to-blue-50/50 border border-slate-200/80 text-center space-y-8 relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_60px_rgba(43,88,184,0.12)] transition-all duration-500 group">
+            <div className="absolute -top-24 -right-24 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-700" />
+            <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-amber-300/20 rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-700" />
+
+            <div className="max-w-2xl mx-auto space-y-4">
+              <h3 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                Ready to Build Your Industrial IT Infrastructure?
+              </h3>
+              <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+                Let’s discuss your architecture, software requirements, or
+                digital transformation vision with our technical experts.
+              </p>
+            </div>
+
+            <div>
               <a
                 href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-sky-600 hover:bg-sky-500 text-white font-bold text-sm shadow-lg shadow-sky-950/50 transition-all duration-300 transform hover:scale-105 group"
+                className="inline-flex items-center gap-3 px-9 py-4 rounded-full bg-[#2b58b8] hover:bg-blue-700 text-white font-bold text-sm shadow-[0_10px_25px_rgba(43,88,184,0.3)] hover:shadow-[0_15px_30px_rgba(43,88,184,0.4)] transition-all duration-300 transform hover:-translate-y-1"
               >
                 Start Project Inquiry
-                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" />
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </div>
           </div>

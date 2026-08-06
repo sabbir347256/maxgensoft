@@ -148,7 +148,6 @@ const Status = () => {
             }}
           />
         </div>
-    
       </div>
 
       <style>{`
