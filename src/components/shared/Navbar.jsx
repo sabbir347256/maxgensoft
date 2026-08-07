@@ -175,32 +175,32 @@ const Navbar = () => {
     {
       title: "Edufano - University Management System",
       desc: "Seamless Management, Infinite Possibilities.",
-      href: "/products/edufano-university",
+      href: "/products/school-management-system",
     },
     {
       title: "Educator LMS",
       desc: "Learn, Teach, Grow – Anytime, Anywhere.",
-      href: "/products/educator-lms",
+      href: "/products/school-management-system",
     },
     {
       title: "Modulexa",
       desc: "Streamline, Automate, Succeed.",
-      href: "/products/modulexa",
+      href: "/products/school-management-system",
     },
     {
       title: "Fintracko",
       desc: "Manage Finances, Maximize Growth.",
-      href: "/products/fintracko",
+      href: "/products/school-management-system",
     },
     {
       title: "HRworkout",
       desc: "Smarter HR, Stronger Workforce.",
-      href: "/products/hrworkout",
+      href: "/products/school-management-system",
     },
     {
       title: "MaxGenSoft Chat",
       desc: "Engage Smarter, Respond Faster.",
-      href: "/products/MaxGenSoft-chat",
+      href: "/products/school-management-system",
     },
   ];
 
