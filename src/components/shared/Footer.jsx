@@ -60,7 +60,7 @@ const Footer = () => {
                 <Image src={logo}></Image>
               </div>
               <span>
-                MaxGen<span className="text-sky-400 font-light">Soft</span>
+                MaxGen<span className="text-sky-400 font-light"></span>
               </span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-6 pr-4">
