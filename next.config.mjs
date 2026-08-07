@@ -10,6 +10,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "thenthbit.com",
       },
+      {
+        protocol: "https",
+        hostname: "niftysol.com",
+      },
+      {
+        protocol: "https",
+        hostname: "gegok12.com",
+      },
     ],
   },
   /* config options here */

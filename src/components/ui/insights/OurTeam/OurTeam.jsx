@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 import {
   Mail,
@@ -18,14 +16,6 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import web_developer from "../../../../../public/web-developer.jpeg";
 
 const OurTeam = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: false,
-      easing: "ease-out-cubic",
-    });
-  }, []);
-
   const teamMembers = [
     {
       name: "Sabbir Ahmmed",

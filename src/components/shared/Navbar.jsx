@@ -170,7 +170,7 @@ const Navbar = () => {
     {
       title: "Edufano – School Management System",
       desc: "Smart Schools, Smarter Management.",
-      href: "/products/edufano-school",
+      href: "/products/school-management-system",
     },
     {
       title: "Edufano - University Management System",
@@ -182,26 +182,26 @@ const Navbar = () => {
       desc: "Learn, Teach, Grow – Anytime, Anywhere.",
       href: "/products/educator-lms",
     },
-    // {
-    //   title: "Modulexa",
-    //   desc: "Streamline, Automate, Succeed.",
-    //   href: "/products/modulexa",
-    // },
-    // {
-    //   title: "Fintracko",
-    //   desc: "Manage Finances, Maximize Growth.",
-    //   href: "/products/fintracko",
-    // },
-    // {
-    //   title: "HRworkout",
-    //   desc: "Smarter HR, Stronger Workforce.",
-    //   href: "/products/hrworkout",
-    // },
-    // {
-    //   title: "MaxGenSoft Chat",
-    //   desc: "Engage Smarter, Respond Faster.",
-    //   href: "/products/MaxGenSoft-chat",
-    // },
+    {
+      title: "Modulexa",
+      desc: "Streamline, Automate, Succeed.",
+      href: "/products/modulexa",
+    },
+    {
+      title: "Fintracko",
+      desc: "Manage Finances, Maximize Growth.",
+      href: "/products/fintracko",
+    },
+    {
+      title: "HRworkout",
+      desc: "Smarter HR, Stronger Workforce.",
+      href: "/products/hrworkout",
+    },
+    {
+      title: "MaxGenSoft Chat",
+      desc: "Engage Smarter, Respond Faster.",
+      href: "/products/MaxGenSoft-chat",
+    },
   ];
 
   const insightsData = [
@@ -217,30 +217,30 @@ const Navbar = () => {
       icon: Users,
       href: "/insights/our-team",
     },
-    // {
-    //   title: "Case Studies",
-    //   desc: "Showcasing success through impactful case studies and proven solutions.",
-    //   icon: Briefcase,
-    //   href: "/insights/case-studies",
-    // },
-    // {
-    //   title: "Blog",
-    //   desc: "Insightful blogs sharing knowledge, trends, and actionable ideas.",
-    //   icon: LayoutGrid,
-    //   href: "/insights/blog",
-    // },
-    // {
-    //   title: "News & Events",
-    //   desc: "Updates on company achievements, innovations, and key milestones.",
-    //   icon: Newspaper,
-    //   href: "/insights/news-events",
-    // },
-    // {
-    //   title: "Career",
-    //   desc: "Partnerships fostering innovation, growth, and mutual success worldwide.",
-    //   icon: TrendingUp,
-    //   href: "/insights/career",
-    // },
+    {
+      title: "Case Studies",
+      desc: "Showcasing success through impactful case studies and proven solutions.",
+      icon: Briefcase,
+      href: "/insights/about-company",
+    },
+    {
+      title: "Blog",
+      desc: "Insightful blogs sharing knowledge, trends, and actionable ideas.",
+      icon: LayoutGrid,
+      href: "/insights/about-company",
+    },
+    {
+      title: "News & Events",
+      desc: "Updates on company achievements, innovations, and key milestones.",
+      icon: Newspaper,
+      href: "/insights/about-company",
+    },
+    {
+      title: "Career",
+      desc: "Partnerships fostering innovation, growth, and mutual success worldwide.",
+      icon: TrendingUp,
+      href: "/insights/about-company",
+    },
   ];
 
   const howWeWorkData = [

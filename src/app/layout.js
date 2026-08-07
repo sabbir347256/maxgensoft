@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import NextTopLoader from "nextjs-toploader";
+import AOSProvider from "@/components/AOSProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +30,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning className="min-h-full flex flex-col">
         <NextTopLoader showSpinner={false} color="#3b82f6" />
         <Navbar />
-        {children}
+        <AOSProvider>{children}</AOSProvider>
         <Footer></Footer>
       </body>
     </html>
