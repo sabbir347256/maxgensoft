@@ -57,7 +57,7 @@ const Footer = () => {
               className="inline-flex gap-2 text-white font-extrabold text-2xl tracking-wide mb-6"
             >
               <div className="w-9 h-9 rounded-xl mt-0.5">
-                <Image src={logo}></Image>
+                <Image src={logo} alt="logo"></Image>
               </div>
               <span>
                 MaxGen<span className="text-sky-400 font-light">Soft</span>

@@ -1,4 +1,4 @@
-import AboutCompany from '@/components/ui/aboutCompany/AboutCompany';
+import AboutCompany from '@/components/ui/insights/aboutCompany/AboutCompany';
 import React from 'react';
 
 const page = () => {
