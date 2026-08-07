@@ -7,7 +7,7 @@ const HowWorkRoot = () => {
         <div>
             <HeroSection></HeroSection>
             <ExpartSection></ExpartSection>
-            {/* <ContactForm></ContactForm> */}
+            <ContactForm></ContactForm>
         </div>
     );
 };

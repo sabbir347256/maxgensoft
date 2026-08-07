@@ -24,6 +24,10 @@ const LoadingSpinner = () => {
         </div>
       </div>
     </div>
+
+    //  <div className="flex min-h-screen items-center justify-center bg-blue-600">
+    //       <LoadingSpinner></LoadingSpinner>
+    //     </div>
   );
 };
 

@@ -27,9 +27,12 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="relative w-full bg-[#F2F6FA] py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="relative rounded-3xl bg-white border border-slate-200/80 shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0">
+    <section className="relative w-full bg-[#F2F6FA] py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-blue-300/30 rounded-full blur-3xl animate-pulse pointer-events-none" />
+      <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-indigo-300/30 rounded-full blur-3xl animate-pulse pointer-events-none" />
+
+      <div className="container relative z-10 mx-auto max-w-7xl">
+        <div className="relative rounded-3xl bg-white/90 backdrop-blur-md border border-slate-200/80 shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0">
           <div className="lg:col-span-7 p-8 sm:p-12 lg:p-14 flex flex-col justify-between">
             <div className="space-y-3 mb-10">
               <span className="inline-block px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-[#2b58b8] text-xs font-semibold tracking-wide uppercase">
@@ -53,7 +56,7 @@ const ContactForm = () => {
                   </label>
                   <input
                     type="text"
-                    placeholder="John Doe"
+                    placeholder="Enter your name"
                     {...register("name", { required: "Name is required" })}
                     className={`w-full px-4 py-3 rounded-xl bg-slate-50 border ${
                       errors.name ? "border-red-500" : "border-slate-200"
@@ -61,7 +64,7 @@ const ContactForm = () => {
                   />
                   {errors.name && (
                     <p className="text-red-500 text-xs mt-1">
-                      {errors.name.message}
+                      {String(errors.name?.message)}
                     </p>
                   )}
                 </div>
@@ -73,7 +76,7 @@ const ContactForm = () => {
                   </label>
                   <input
                     type="text"
-                    placeholder="Acme Inc."
+                    placeholder="Enter company name"
                     {...register("company", {
                       required: "Company is required",
                     })}
@@ -83,7 +86,7 @@ const ContactForm = () => {
                   />
                   {errors.company && (
                     <p className="text-red-500 text-xs mt-1">
-                      {errors.company.message}
+                      {String(errors.company?.message)}
                     </p>
                   )}
                 </div>
@@ -97,7 +100,7 @@ const ContactForm = () => {
                   </label>
                   <input
                     type="email"
-                    placeholder="john@example.com"
+                    placeholder="Enter your email"
                     {...register("email", {
                       required: "Email is required",
                       pattern: {
@@ -111,7 +114,7 @@ const ContactForm = () => {
                   />
                   {errors.email && (
                     <p className="text-red-500 text-xs mt-1">
-                      {errors.email.message}
+                      {String(errors.email?.message)}
                     </p>
                   )}
                 </div>
@@ -123,7 +126,7 @@ const ContactForm = () => {
                   </label>
                   <input
                     type="tel"
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="Enter your contact no"
                     {...register("phone", {
                       required: "Phone number is required",
                     })}
@@ -133,7 +136,7 @@ const ContactForm = () => {
                   />
                   {errors.phone && (
                     <p className="text-red-500 text-xs mt-1">
-                      {errors.phone.message}
+                      {String(errors.phone?.message)}
                     </p>
                   )}
                 </div>
@@ -162,33 +165,7 @@ const ContactForm = () => {
                   </select>
                   {errors.industry && (
                     <p className="text-red-500 text-xs mt-1">
-                      {errors.industry.message}
-                    </p>
-                  )}
-                </div>
-
-                <div>
-                  <label className="text-xs font-semibold text-slate-700 mb-2 flex items-center gap-1.5">
-                    <DollarSign className="w-3.5 h-3.5 text-[#2b58b8]" /> Budget{" "}
-                    <span className="text-red-500">*</span>
-                  </label>
-                  <select
-                    {...register("budget", {
-                      required: "Please select a budget range",
-                    })}
-                    className={`w-full px-4 py-3 rounded-xl bg-slate-50 border ${
-                      errors.budget ? "border-red-500" : "border-slate-200"
-                    } text-slate-900 text-sm focus:bg-white focus:border-[#2b58b8] focus:ring-2 focus:ring-[#2b58b8]/20 outline-none transition-all`}
-                  >
-                    <option value="">Select Budget</option>
-                    <option value="5k-10k">$5k - $10k</option>
-                    <option value="10k-25k">$10k - $25k</option>
-                    <option value="25k-50k">$25k - $50k</option>
-                    <option value="50k+">$50k+</option>
-                  </select>
-                  {errors.budget && (
-                    <p className="text-red-500 text-xs mt-1">
-                      {errors.budget.message}
+                      {String(errors.industry?.message)}
                     </p>
                   )}
                 </div>
@@ -209,7 +186,7 @@ const ContactForm = () => {
                 />
                 {errors.message && (
                   <p className="text-red-500 text-xs mt-1">
-                    {errors.message.message}
+                    {String(errors.message?.message)}
                   </p>
                 )}
               </div>
@@ -238,7 +215,7 @@ const ContactForm = () => {
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
                 alt="Our Team"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-white space-y-1">
