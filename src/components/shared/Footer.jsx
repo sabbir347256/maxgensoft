@@ -10,6 +10,8 @@ import {
   Cpu,
 } from "lucide-react";
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import logo from '../../../public/logo.png';
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -52,10 +54,10 @@ const Footer = () => {
           <div className="lg:col-span-4">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-white font-extrabold text-2xl tracking-wide mb-6"
+              className="inline-flex gap-2 text-white font-extrabold text-2xl tracking-wide mb-6"
             >
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 to-blue-600 flex items-center justify-center text-slate-950 text-base shadow-lg shadow-sky-500/20">
-                ▲
+              <div className="w-9 h-9 rounded-xl mt-0.5">
+                <Image src={logo}></Image>
               </div>
               <span>
                 MaxGen<span className="text-sky-400 font-light">Soft</span>
