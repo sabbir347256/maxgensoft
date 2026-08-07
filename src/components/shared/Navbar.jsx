@@ -317,7 +317,7 @@ const Navbar = () => {
             ].map((item) => (
               <div
                 key={item}
-                className="py-6"
+                className="py-5"
                 onMouseEnter={() => setActiveMenu(item)}
                 onMouseLeave={() => setActiveMenu("")}
               >
@@ -586,7 +586,7 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-            <Link href="how-we-work">
+            <Link href="/how-we-work">
               <button
                 className={`flex items-center gap-1 text-sm font-medium transition-colors ${
                   scrolled
