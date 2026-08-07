@@ -93,7 +93,7 @@ const ExpartSection = () => {
     },
   ];
   return (
-    <section className="relative w-full bg-white text-slate-800 overflow-hidden py-24 px-4 sm:px-6 lg:px-8">
+    <section className="relative w-full bg-white text-slate-800 overflow-hidden py-24 sm:px-6 lg:px-8">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-amber-200/30 rounded-full blur-[150px] animate-pulse" />
         <div className="absolute top-2/3 right-1/4 w-[600px] h-[400px] bg-blue-300/20 rounded-full blur-[140px] animate-pulse" />

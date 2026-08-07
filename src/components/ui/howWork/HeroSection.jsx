@@ -1,18 +1,23 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import {
   Compass,
   Code2,
-  Cpu,
-  Layers,
   ShieldCheck,
   Rocket,
   CheckCircle2,
   ArrowRight,
   Zap,
   Sparkles,
+  Cpu,
+  Layers,
 } from "lucide-react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const HeroSection = () => {
   const steps = [
@@ -66,9 +71,95 @@ const HeroSection = () => {
     },
   ];
 
+  const containerRef = useRef(null);
+  const cardRef = useRef(null);
+  const leftContentRef = useRef(null);
+  const rightCardRef = useRef(null);
+
+  const workflowSectionRef = useRef(null);
+  const workflowCardsRef = useRef(null);
+
+  const ctaSectionRef = useRef(null);
+  const ctaCardRef = useRef(null);
+
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({
+        defaults: { ease: "power3.out", duration: 1 },
+      });
+
+      tl.fromTo(
+        cardRef.current,
+        { y: 60, opacity: 0, scale: 0.98 },
+        { y: 0, opacity: 1, scale: 1, duration: 1.1 },
+      );
+
+      if (leftContentRef.current) {
+        const elements = leftContentRef.current.children;
+        tl.fromTo(
+          elements,
+          { y: 40, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.8, stagger: 0.15 },
+          "-=0.7",
+        );
+      }
+
+      tl.fromTo(
+        rightCardRef.current,
+        { x: 50, opacity: 0, rotateY: -15, scale: 0.95 },
+        { x: 0, opacity: 1, rotateY: 0, scale: 1, duration: 1 },
+        "-=0.9",
+      );
+
+      if (workflowCardsRef.current) {
+        const stepCards = workflowCardsRef.current.children;
+        gsap.fromTo(
+          stepCards,
+          { y: 60, opacity: 0, scale: 0.95 },
+          {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: workflowSectionRef.current,
+              start: "top 75%",
+              toggleActions: "play none none reverse",
+            },
+          },
+        );
+      }
+
+      if (ctaCardRef.current) {
+        gsap.fromTo(
+          ctaCardRef.current,
+          { y: 80, opacity: 0, scale: 0.9 },
+          {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: ctaSectionRef.current,
+              start: "top 80%",
+              toggleActions: "play none none reverse",
+            },
+          },
+        );
+      }
+    },
+    { scope: containerRef },
+  );
+
   return (
-    <div className="w-full bg-[#030712] text-white overflow-hidden relative">
-      <style flex-inline="true">{`
+    <div
+      ref={containerRef}
+      className="w-full bg-[#030712] text-white overflow-hidden relative"
+    >
+      <style>{`
         @keyframes floatGrid {
           0%, 100% { transform: translateY(0px) scale(1); }
           50% { transform: translateY(-15px) scale(1.01); }
@@ -82,6 +173,7 @@ const HeroSection = () => {
         }
         .animate-grid-float {
           animation: floatGrid 10s ease-in-out infinite;
+          will-change: transform;
         }
         .animate-line-glow {
           animation: lineGlow 4s ease-in-out infinite;
@@ -90,9 +182,25 @@ const HeroSection = () => {
           stroke-dasharray: 10, 15;
           animation: dashMove 20s linear infinite;
         }
+        @keyframes dropLine {
+          0% {
+            transform: translateY(-100%);
+            opacity: 0;
+          }
+          15% {
+            opacity: 1;
+          }
+          85% {
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(800%);
+            opacity: 0;
+          }
+        }
       `}</style>
 
-      <section className="relative bg-white py-24 px-4 border-b border-slate-800/80">
+      <section className="relative bg-white md:py-24 py-4 border-b border-slate-800/80">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-[#060b19]/60 to-blue-900 z-0" />
 
         <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-50 z-0 animate-grid-float">
@@ -137,11 +245,16 @@ const HeroSection = () => {
         </div>
 
         <div className="container mx-auto relative z-10">
-          <div className="relative p-8 md:p-14 rounded-3xl bg-[#091122]/80 border border-slate-800/80 backdrop-blur-xl shadow-2xl overflow-hidden transition-all duration-700 hover:border-slate-700">
+          <div
+            ref={cardRef}
+            className="relative p-8 md:p-14 rounded-3xl bg-[#091122]/80 border border-slate-800/80 backdrop-blur-xl shadow-2xl overflow-hidden transition-all duration-700 hover:border-slate-700 will-change-transform"
+          >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-              <div className="lg:col-span-7 space-y-6 transition-all duration-700 ease-out transform translate-y-0 opacity-100">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider animate-bounce">
-                  <Zap className="w-3.5 h-3.5" /> Industrial-Grade Execution
+              <div ref={leftContentRef} className="lg:col-span-7 space-y-6">
+                <div>
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider">
+                    <Zap className="w-3.5 h-3.5" /> Industrial-Grade Execution
+                  </div>
                 </div>
 
                 <h1 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
@@ -173,9 +286,12 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              <div className="lg:col-span-5 relative">
+              <div
+                ref={rightCardRef}
+                className="lg:col-span-5 relative perspective-1000"
+              >
                 <div className="relative w-full aspect-square rounded-2xl bg-[#070c18] border border-slate-800 p-6 flex flex-col justify-between overflow-hidden shadow-2xl group transition-all duration-500 hover:border-sky-500/50">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-sky-500/10 via-transparent to-slate-800/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-sky-500/10 via-transparent to-slate-800/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                   <div className="flex justify-between items-center z-10">
                     <div className="flex gap-1.5">
@@ -211,7 +327,10 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <section className="relative bg-[#F2F6FA] py-28 px-4 border-b border-slate-200/80 overflow-hidden">
+      <section
+        ref={workflowSectionRef}
+        className="relative bg-[#F2F6FA] md:py-28 py-16 border-b border-slate-200/80 overflow-hidden"
+      >
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-blue-400/15 rounded-full blur-[140px] pointer-events-none animate-pulse" />
         <div className="absolute bottom-10 right-10 w-[500px] h-[300px] bg-amber-300/15 rounded-full blur-[120px] pointer-events-none animate-pulse" />
         <div className="absolute inset-0 opacity-[0.06] pointer-events-none">
@@ -302,25 +421,6 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <style>{`
-        @keyframes dropLine {
-          0% {
-            transform: translateY(-100%);
-            opacity: 0;
-          }
-          15% {
-            opacity: 1;
-          }
-          85% {
-            opacity: 1;
-          }
-          100% {
-            transform: translateY(800%);
-            opacity: 0;
-          }
-        }
-      `}</style>
-
         <div className="container mx-auto max-w-7xl relative z-10 space-y-16">
           <div className="text-center space-y-4 max-w-2xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-[#2b58b8] text-xs font-semibold tracking-wide uppercase shadow-sm">
@@ -335,25 +435,34 @@ const HeroSection = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            ref={workflowCardsRef}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
             {steps.map((step, idx) => {
               const Icon = step.icon;
               return (
                 <div
                   key={idx}
-                  className={`group relative p-7 rounded-3xl border border-white/80 bg-white/70 backdrop-blur-xl transition-all duration-500 ease-out flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(43,88,184,0.12)] hover:border-[#2b58b8]/30 hover:-translate-y-2 overflow-hidden ${step.cardBg || ""}`}
+                  className={`group relative p-7 rounded-3xl border border-white/80 bg-white/70 backdrop-blur-xl transition-all duration-500 ease-out flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(43,88,184,0.12)] hover:border-[#2b58b8]/30 hover:-translate-y-2 overflow-hidden ${
+                    step.cardBg || ""
+                  }`}
                 >
                   <div className="absolute top-0 right-0 -mr-8 -mt-8 w-24 h-24 bg-gradient-to-br from-[#2b58b8]/10 to-transparent rounded-full blur-xl group-hover:scale-150 transition-transform duration-500" />
 
                   <div>
                     <div className="flex items-center justify-between mb-8">
                       <div
-                        className={`w-14 h-14 rounded-2xl border border-blue-100/80 bg-gradient-to-br from-blue-50 to-white flex items-center justify-center text-[#2b58b8] shadow-sm group-hover:scale-110 group-hover:bg-[#2b58b8] group-hover:text-white group-hover:border-[#2b58b8] transition-all duration-500 ${step.accentColor || ""}`}
+                        className={`w-14 h-14 rounded-2xl border border-blue-100/80 bg-gradient-to-br from-blue-50 to-white flex items-center justify-center text-[#2b58b8] shadow-sm group-hover:scale-110 group-hover:bg-[#2b58b8] group-hover:text-white group-hover:border-[#2b58b8] transition-all duration-500 ${
+                          step.accentColor || ""
+                        }`}
                       >
                         <Icon className="w-7 h-7" />
                       </div>
                       <span
-                        className={`text-3xl font-black font-mono text-slate-300 group-hover:text-[#2b58b8] transition-colors duration-300 ${step.numColor || ""}`}
+                        className={`text-3xl font-black font-mono text-slate-300 group-hover:text-[#2b58b8] transition-colors duration-300 ${
+                          step.numColor || ""
+                        }`}
                       >
                         {step.num}
                       </span>
@@ -371,7 +480,9 @@ const HeroSection = () => {
                     {step.tags?.map((tag, tIdx) => (
                       <span
                         key={tIdx}
-                        className={`text-[11px] font-semibold px-2.5 py-1 rounded-lg bg-blue-50/80 text-[#2b58b8] border border-blue-100/80 transition-all duration-300 hover:bg-[#2b58b8] hover:text-white hover:border-[#2b58b8] ${step.tagBg || ""}`}
+                        className={`text-[11px] font-semibold px-2.5 py-1 rounded-lg bg-blue-50/80 text-[#2b58b8] border border-blue-100/80 transition-all duration-300 hover:bg-[#2b58b8] hover:text-white hover:border-[#2b58b8] ${
+                          step.tagBg || ""
+                        }`}
                       >
                         {tag}
                       </span>
@@ -384,7 +495,7 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <section className="relative bg-[#F2F6FA] py-24 px-4 overflow-hidden">
+      <section className="relative bg-[#F2F6FA] md:py-24 py-16 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.06] pointer-events-none">
           <svg
             className="w-full h-full"
@@ -394,7 +505,7 @@ const HeroSection = () => {
           >
             <defs>
               <pattern
-                id="ultra-light-grid"
+                id="ultra-light-grid-cta"
                 width="120"
                 height="120"
                 patternUnits="userSpaceOnUse"
@@ -413,84 +524,13 @@ const HeroSection = () => {
                 />
               </pattern>
             </defs>
-            <rect width="100%" height="100%" fill="url(#ultra-light-grid)" />
+            <rect
+              width="100%"
+              height="100%"
+              fill="url(#ultra-light-grid-cta)"
+            />
           </svg>
         </div>
-
-        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-          <div className="absolute left-[10%] top-0 bottom-0 w-[1px] bg-slate-100/50">
-            <div
-              className="w-full h-24 bg-gradient-to-b from-transparent via-sky-400 to-transparent"
-              style={{
-                animation: "dropLine 6s infinite linear",
-              }}
-            />
-          </div>
-
-          <div className="absolute left-[26%] top-0 bottom-0 w-[1px] bg-slate-100/50">
-            <div
-              className="w-full h-24 bg-gradient-to-b from-transparent via-blue-500 to-transparent"
-              style={{
-                animation: "dropLine 8s infinite linear 2s",
-              }}
-            />
-          </div>
-
-          <div className="absolute left-[42%] top-0 bottom-0 w-[1px] bg-slate-100/50">
-            <div
-              className="w-full h-24 bg-gradient-to-b from-transparent via-sky-400 to-transparent"
-              style={{
-                animation: "dropLine 5s infinite linear 1s",
-              }}
-            />
-          </div>
-
-          <div className="absolute left-[58%] top-0 bottom-0 w-[1px] bg-slate-100/50">
-            <div
-              className="w-full h-24 bg-gradient-to-b from-transparent via-indigo-400 to-transparent"
-              style={{
-                animation: "dropLine 7s infinite linear 3.5s",
-              }}
-            />
-          </div>
-
-          <div className="absolute left-[74%] top-0 bottom-0 w-[1px] bg-slate-100/50">
-            <div
-              className="w-full h-24 bg-gradient-to-b from-transparent via-sky-500 to-transparent"
-              style={{
-                animation: "dropLine 6.5s infinite linear 1.5s",
-              }}
-            />
-          </div>
-
-          <div className="absolute left-[90%] top-0 bottom-0 w-[1px] bg-slate-100/50">
-            <div
-              className="w-full h-24 bg-gradient-to-b from-transparent via-blue-400 to-transparent"
-              style={{
-                animation: "dropLine 5.5s infinite linear 2.8s",
-              }}
-            />
-          </div>
-        </div>
-
-        <style>{`
-        @keyframes dropLine {
-          0% {
-            transform: translateY(-100%);
-            opacity: 0;
-          }
-          15% {
-            opacity: 1;
-          }
-          85% {
-            opacity: 1;
-          }
-          100% {
-            transform: translateY(800%);
-            opacity: 0;
-          }
-        }
-      `}</style>
 
         <div className="container mx-auto max-w-5xl relative z-10">
           <div className="p-10 md:p-16 rounded-[2.5rem] bg-gradient-to-br from-white via-white to-blue-50/50 border border-slate-200/80 text-center space-y-8 relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_60px_rgba(43,88,184,0.12)] transition-all duration-500 group">
