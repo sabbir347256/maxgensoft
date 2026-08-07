@@ -12,6 +12,11 @@ import {
   Shirt,
   Compass,
   ArrowUpRight,
+  Code2,
+  Cloud,
+  Globe,
+  ShieldCheck,
+  Zap,
 } from "lucide-react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -41,32 +46,32 @@ const AboutCompany = () => {
 
   const features = [
     {
-      icon: Scissors,
-      title: "Premium Fabric Quality",
-      desc: "Handpicked cotton, silk, and lawn fabrics crafted to provide maximum comfort without compromising elegance.",
+      icon: Cloud,
+      title: "Cloud-Native SaaS Products",
+      desc: "Robust, multi-tenant subscription software designed to automate workflows and scale seamlessly with your business growth.",
     },
     {
-      icon: Shirt,
-      title: "Versatile Unstitched Styling",
-      desc: "Complete creative freedom to stitch and style your outfit according to your personal fit and aesthetic.",
+      icon: Globe,
+      title: "Custom Web Applications",
+      desc: "Tailor-made web solutions engineered with modern tech stacks to deliver ultra-fast speeds and sleek user interfaces.",
     },
     {
-      icon: HeartHandshake,
-      title: "Student & Youth Friendly",
-      desc: "High-end fashion made accessible with competitive pricing designed for modern students and young adults.",
+      icon: ShieldCheck,
+      title: "Enterprise-Grade Security",
+      desc: "High-level encryption, secure API integrations, and cloud infrastructure engineered for maximum data safety.",
     },
     {
-      icon: Award,
-      title: "Authentic Craftsmanship",
-      desc: "Meticulous embroidery, vibrant color palettes, and durable dyes engineered to last season after season.",
+      icon: Zap,
+      title: "High Performance Architecture",
+      desc: "Optimized server rendering, light codebases, and fast database queries built for speed and effortless scalability.",
     },
   ];
 
   const stats = [
-    { number: "10K+", label: "Happy Customers" },
-    { number: "500+", label: "Unstitched Designs" },
-    { number: "99%", label: "Satisfaction Rate" },
-    { number: "24/7", label: "Dedicated Support" },
+    { number: "99.9%", label: "Uptime Guaranteed" },
+    { number: "50+", label: "Web Apps Delivered" },
+    { number: "10+", label: "SaaS Products" },
+    { number: "24/7", label: "Dev & Cloud Support" },
   ];
 
   useGSAP(
@@ -213,11 +218,11 @@ const AboutCompany = () => {
   return (
     <div
       ref={containerRef}
-      className="w-full text-slate-800 overflow-hidden relative font-sans"
+      className="w-full text-slate-800 overflow-hidden relative "
     >
       <section
         ref={heroRef}
-        className="relative py-20 lg:py-28  bg-gradient-to-b from-sky-50 via-slate-50 to-white overflow-hidden"
+        className="relative py-20 lg:py-28 bg-gradient-to-b from-sky-50 via-slate-50 to-white overflow-hidden"
       >
         <div className="absolute inset-0 pointer-events-none z-0">
           <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -245,36 +250,36 @@ const AboutCompany = () => {
         <div className="container grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
           <div ref={heroTextRef} className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100/90 border border-blue-200 text-blue-900 text-xs font-semibold uppercase tracking-wider shadow-sm">
-              <Sparkles className="w-3.5 h-3.5 text-orange-600" /> Redefining
-              Unstitched Elegance
+              <Sparkles className="w-3.5 h-3.5 text-orange-600" /> Next-Gen IT &
+              Software Solutions
             </div>
 
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight text-slate-900">
-              Crafting Fashion <br />
+              Building Scalable SaaS & <br />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-600 to-orange-500">
-                That Reflects Your Unique Identity
+                Modern Web Experiences
               </span>
             </h1>
 
             <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-2xl">
-              We bring you premium unstitched apparel designed specifically for
-              modern youth and students. We believe ethnic fashion should be
-              versatile, effortless, and accessible without ever compromising on
-              fabric quality or contemporary aesthetics.
+              We are a forward-thinking software company specializing in
+              enterprise-grade SaaS products and custom web development. We help
+              businesses transform ideas into powerful, high-performing digital
+              solutions.
             </p>
 
             <div className="pt-2 flex flex-wrap gap-4 text-xs font-semibold text-slate-700">
               <span className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2.5 rounded-xl border border-slate-200 shadow-sm">
-                <CheckCircle2 className="w-4 h-4 text-blue-600" /> Premium
-                Fabrics
+                <CheckCircle2 className="w-4 h-4 text-blue-600" /> SaaS
+                Development
               </span>
               <span className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2.5 rounded-xl border border-slate-200 shadow-sm">
-                <CheckCircle2 className="w-4 h-4 text-orange-500" />{" "}
-                Youth-Centric Styles
+                <CheckCircle2 className="w-4 h-4 text-orange-500" /> Web
+                Development
               </span>
               <span className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2.5 rounded-xl border border-slate-200 shadow-sm">
-                <CheckCircle2 className="w-4 h-4 text-blue-600" /> Affordable
-                Luxury
+                <CheckCircle2 className="w-4 h-4 text-blue-600" /> Cloud
+                Architecture
               </span>
             </div>
           </div>
@@ -283,28 +288,28 @@ const AboutCompany = () => {
             <div className="relative rounded-3xl bg-white/90 backdrop-blur-md border border-slate-200/80 p-8 shadow-xl overflow-hidden group hover:border-sky-400 transition-all duration-500">
               <div className="flex items-center justify-between mb-8">
                 <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-700">
-                  <Scissors className="w-6 h-6" />
+                  <Code2 className="w-6 h-6" />
                 </div>
                 <span className="text-xs font-mono text-slate-600 uppercase tracking-widest bg-slate-100 px-3 py-1 rounded-full border border-slate-200">
-                  Unstitched Apparel
+                  IT Engineering
                 </span>
               </div>
 
               <div className="space-y-4 my-6">
                 <h3 className="text-2xl font-bold text-slate-900">
-                  Your Canvas, Your Style
+                  Engineering Modern Digital Ecosystems
                 </h3>
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  Every unstitched fabric kit comes with thoughtfully designed
-                  patterns, premium borders, and matching dupattas so you can
-                  tailor your silhouette exactly the way you vision it.
+                  From subscription-based SaaS tools to bespoke web solutions,
+                  we build cloud-ready software engineered for security, speed,
+                  and continuous growth.
                 </p>
               </div>
 
               <div className="pt-6 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-                <span>Designed for Students & Youth</span>
+                <span>Tailored Software Services</span>
                 <span className="text-orange-600 font-semibold flex items-center gap-1 group-hover:text-orange-700 transition-colors">
-                  Explore Collection <ArrowUpRight className="w-3.5 h-3.5" />
+                  Our Products <ArrowUpRight className="w-3.5 h-3.5" />
                 </span>
               </div>
             </div>
@@ -312,7 +317,7 @@ const AboutCompany = () => {
         </div>
       </section>
 
-      <section className="border-y border-slate-200/80 bg-blue-900 text-white py-14  relative overflow-hidden">
+      <section className="border-y border-slate-200/80 bg-blue-900 text-white py-14 relative overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none opacity-20 flex w-[200%]"
           ref={statsLinesRef}
@@ -382,15 +387,17 @@ const AboutCompany = () => {
         <div className="container space-y-16 relative z-10">
           <div className="text-center space-y-4 max-w-2xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100/90 border border-orange-200 text-orange-900 text-xs font-semibold uppercase tracking-wider backdrop-blur-sm shadow-sm">
-              <Compass className="w-3.5 h-3.5 text-orange-600" /> Our Commitment
+              <Compass className="w-3.5 h-3.5 text-orange-600" /> Core
+              Capabilities
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">
-              Why Choose Our <span className="text-blue-700">Collections</span>
+              Why Partner With Our{" "}
+              <span className="text-blue-700">Tech Team</span>
             </h2>
             <p className="text-slate-600 text-sm md:text-base leading-relaxed">
-              We combine traditional textile craftsmanship with contemporary
-              streetwear sensibilities to give you fashion that feels uniquely
-              yours.
+              We leverage modern software stack technologies and industry best
+              practices to build future-proof web products that give companies a
+              competitive edge.
             </p>
           </div>
 
@@ -455,9 +462,9 @@ const AboutCompany = () => {
               Our Mission
             </h3>
             <p className="text-slate-600 text-sm md:text-base leading-relaxed">
-              To empower young people with high-quality, customizable unstitched
-              fashion that blend modern elegance with everyday
-              budget-friendliness.
+              To build reliable SaaS products and tailor-made website solutions
+              that empower startups and enterprises to automate processes, grow
+              faster, and succeed digitally.
             </p>
           </div>
 
@@ -472,9 +479,9 @@ const AboutCompany = () => {
               Our Vision
             </h3>
             <p className="text-slate-600 text-sm md:text-base leading-relaxed">
-              To become the go-to e-commerce destination for unstitched apparel,
-              known for trendsetting designs, seamless online shopping, and
-              unmatched customer care.
+              To become a global IT tech leader recognized for pioneering SaaS
+              innovations, top-tier engineering standards, and delivering
+              exceptional value through software services.
             </p>
           </div>
         </div>

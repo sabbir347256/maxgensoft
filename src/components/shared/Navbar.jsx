@@ -198,9 +198,9 @@ const Navbar = () => {
       href: "/products/hrworkout",
     },
     {
-      title: "ADDIE Chat",
+      title: "MaxGenSoft Chat",
       desc: "Engage Smarter, Respond Faster.",
-      href: "/products/addie-chat",
+      href: "/products/MaxGenSoft-chat",
     },
   ];
 
@@ -351,7 +351,7 @@ const Navbar = () => {
                             Transforming Sectors
                           </h4>
                           <p className="text-xs text-gray-500 leading-relaxed">
-                            See how ADDIE is driving digital transformation
+                            See how MaxGenSoft is driving digital transformation
                             across industries with specialized solutions.
                           </p>
                         </div>
@@ -526,7 +526,7 @@ const Navbar = () => {
                           Transforming Sectors
                         </h4>
                         <p className="text-xs text-gray-500 leading-relaxed">
-                          See how ADDIE is driving digital transformation across
+                          See how MaxGenSoft is driving digital transformation across
                           industries with specialized solutions.
                         </p>
                       </div>
