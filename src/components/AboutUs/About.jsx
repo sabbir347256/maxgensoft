@@ -96,7 +96,7 @@ const About = () => {
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <Link
-                href="/about"
+                href="/insights/about-company"
                 className="group/btn inline-flex items-center justify-center gap-2 px-7 py-4 bg-sky-500 hover:bg-sky-600 text-white font-bold text-sm rounded-2xl transition-all duration-300 shadow-lg shadow-sky-500/25 hover:shadow-sky-500/40 hover:-translate-y-1"
               >
                 Discover Our Journey

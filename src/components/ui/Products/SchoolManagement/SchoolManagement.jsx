@@ -155,11 +155,11 @@ const SchoolManagement = () => {
                 data-aos-delay="300"
                 className="flex flex-wrap gap-4 pt-2"
               >
-                <button className="px-6 py-3.5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-semibold text-sm shadow-lg shadow-blue-700/25 transition-all flex items-center gap-2 group">
+                <button className="px-6 py-3.5 cursor-pointer rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-semibold text-sm shadow-lg shadow-blue-700/25 transition-all flex items-center gap-2 group">
                   Schedule Free Demo
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
-                <button className="px-6 py-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-300 text-slate-700 font-semibold text-sm shadow-sm transition-all">
+                <button className="px-6 py-3.5 cursor-pointer rounded-xl bg-white border border-slate-200 hover:border-slate-300 text-slate-700 font-semibold text-sm shadow-sm transition-all">
                   Explore Modules
                 </button>
               </div>
@@ -261,7 +261,7 @@ const SchoolManagement = () => {
               <button
                 key={idx}
                 onClick={() => setActiveTab(idx)}
-                className={`px-5 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 ${
+                className={`px-5 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 cursor-pointer ${
                   activeTab === idx
                     ? "bg-blue-600 text-white shadow-lg shadow-blue-600/30"
                     : "bg-slate-800/80 text-slate-400 hover:bg-slate-800 hover:text-white border border-slate-700/60"
@@ -486,7 +486,7 @@ const SchoolManagement = () => {
                   key={idx}
                   data-aos="fade-up"
                   data-aos-delay={idx * 100}
-                  className="bg-white/90 backdrop-blur-md border border-slate-200 rounded-3xl p-8 flex flex-col justify-between hover:border-sky-400 hover:-translate-y-2 transition-all duration-300 shadow-md group"
+                  className="bg-white/90 backdrop-blur-md border cursor-pointer border-slate-200 rounded-3xl p-8 flex flex-col justify-between hover:border-sky-400 hover:-translate-y-2 transition-all duration-300 shadow-md group"
                 >
                   <div className="space-y-4">
                     <div className="w-12 h-12 rounded-2xl bg-sky-50 border border-sky-100 flex items-center justify-center text-blue-700 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
@@ -556,7 +556,7 @@ const SchoolManagement = () => {
             data-aos-delay="100"
             className="pt-2 flex justify-center gap-4"
           >
-            <button className="px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm shadow-lg shadow-orange-500/25 transition-all">
+            <button className="px-8 py-4 rounded-xl cursor-pointer bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm shadow-lg shadow-orange-500/25 transition-all">
               Request Live Demo
             </button>
           </div>
