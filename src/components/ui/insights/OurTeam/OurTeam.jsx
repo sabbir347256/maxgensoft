@@ -267,7 +267,7 @@ const OurTeam = () => {
                 key={idx}
                 data-aos="fade-up"
                 data-aos-delay={idx * 150}
-                className="bg-white/90 backdrop-blur-md border border-slate-200 rounded-3xl p-6 flex flex-col justify-between hover:border-sky-400 hover:-translate-y-2 transition-all duration-300 shadow-md group"
+                className="bg-white/90 cursor-pointer backdrop-blur-md border border-slate-200 rounded-3xl p-6 flex flex-col justify-between hover:border-sky-400 hover:-translate-y-2 transition-all duration-300 shadow-md group"
               >
                 <div className="space-y-6">
                   <div className="relative overflow-hidden rounded-2xl h-64 w-full">
@@ -369,7 +369,7 @@ const OurTeam = () => {
           <div
             data-aos="fade-right"
             data-aos-delay="100"
-            className="p-8 rounded-3xl bg-white/90 backdrop-blur-md border border-slate-200 space-y-4 shadow-sm"
+            className="p-8 cursor-pointer rounded-3xl bg-white/90 backdrop-blur-md border border-slate-200 space-y-4 shadow-sm"
           >
             <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-700">
               <Code2 className="w-6 h-6" />
@@ -386,7 +386,7 @@ const OurTeam = () => {
           <div
             data-aos="fade-up"
             data-aos-delay="200"
-            className="p-8 rounded-3xl bg-white/90 backdrop-blur-md border border-slate-200 space-y-4 shadow-sm"
+            className="p-8 cursor-pointer rounded-3xl bg-white/90 backdrop-blur-md border border-slate-200 space-y-4 shadow-sm"
           >
             <div className="w-12 h-12 rounded-2xl bg-orange-50 border border-orange-100 flex items-center justify-center text-orange-600">
               <Terminal className="w-6 h-6" />
@@ -403,7 +403,7 @@ const OurTeam = () => {
           <div
             data-aos="fade-left"
             data-aos-delay="300"
-            className="p-8 rounded-3xl bg-white/90 backdrop-blur-md border border-slate-200 space-y-4 shadow-sm"
+            className="p-8 cursor-pointer rounded-3xl bg-white/90 backdrop-blur-md border border-slate-200 space-y-4 shadow-sm"
           >
             <div className="w-12 h-12 rounded-2xl bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-700">
               <Globe className="w-6 h-6" />

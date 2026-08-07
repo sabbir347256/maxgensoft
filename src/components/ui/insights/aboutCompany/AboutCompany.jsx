@@ -410,7 +410,7 @@ const AboutCompany = () => {
               return (
                 <div
                   key={idx}
-                  className="p-8 rounded-3xl bg-white/90 backdrop-blur-md border border-slate-200 flex flex-col justify-between hover:border-sky-400 hover:-translate-y-2 transition-all duration-500 group shadow-md"
+                  className="p-8 cursor-pointer rounded-3xl bg-white/90 backdrop-blur-md border border-slate-200 flex flex-col justify-between hover:border-sky-400 hover:-translate-y-2 transition-all duration-500 group shadow-md"
                 >
                   <div className="space-y-6">
                     <div className="w-14 h-14 rounded-2xl bg-sky-50 border border-sky-100 flex items-center justify-center text-blue-700 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
