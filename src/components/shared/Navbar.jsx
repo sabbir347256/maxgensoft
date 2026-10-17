@@ -29,7 +29,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import logo from "../../../public/logo.png";
+import logo from "../../../public/logo.jpeg";
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState("");
@@ -198,7 +198,7 @@ const Navbar = () => {
       href: "/products/school-management-system",
     },
     {
-      title: "MaxGenSoft Chat",
+      title: "Ollyex Chat",
       desc: "Engage Smarter, Respond Faster.",
       href: "/products/school-management-system",
     },
@@ -297,14 +297,14 @@ const Navbar = () => {
             onClick={closeAll}
             className="flex items-center gap-2 text-white font-bold text-2xl tracking-wide"
           >
-            <div className="w-9 h-9 rounded-full border-2 border-white flex items-center justify-center text-sm bg-white overflow-hidden">
+            <div className="rounded-full border-2 border-white flex items-center justify-center text-sm bg-white overflow-hidden">
               <Image
                 src={logo}
-                alt="MaxGenSoft Logo"
-                className="size-6 object-contain"
+                alt="Ollyex Logo"
+                className="size-7 object-contain"
               />
             </div>
-            MaxGenSoft
+            Ollyex
           </Link>
 
           <div className="hidden lg:flex items-center gap-8 relative">
@@ -351,7 +351,7 @@ const Navbar = () => {
                             Transforming Sectors
                           </h4>
                           <p className="text-xs text-gray-500 leading-relaxed">
-                            See how MaxGenSoft is driving digital transformation
+                            See how Ollyex is driving digital transformation
                             across industries with specialized solutions.
                           </p>
                         </div>
@@ -526,7 +526,7 @@ const Navbar = () => {
                           Transforming Sectors
                         </h4>
                         <p className="text-xs text-gray-500 leading-relaxed">
-                          See how MaxGenSoft is driving digital transformation across
+                          See how Ollyex is driving digital transformation across
                           industries with specialized solutions.
                         </p>
                       </div>

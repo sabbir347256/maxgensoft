@@ -12,16 +12,14 @@ const Hero = () => {
       />
       <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-900/75 to-slate-900/20" />
 
-      <div className="relative container  pt-20 z-10 w-full">
-        <div className="max-w-3xl">
+      <div className="relative container z-10 w-full">
+        <div className="max-w-4xl">
           <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight uppercase mb-6">
             We Sense Your Thoughts <br />
-            <span className="text-sky-400">Before You Think</span>
+            <span className="text-sky-400">Before You Think <br /> We Tech</span>
           </h1>
           <p className="text-gray-300 text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed font-normal">
-            Through Analysis, Design, Development, Implementation, and
-            Evaluation, we turn unspoken ideas into intelligent software that
-            meets your goals.
+            Optimized Logic & Leading Excellence for Your Expansion
           </p>
         </div>
       </div>

@@ -10,7 +10,7 @@ import {
   Cpu,
 } from "lucide-react";
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import logo from '../../../public/logo.png';
+import logo from '../../../public/logo.jpeg';
 import Image from "next/image";
 
 const Footer = () => {
@@ -60,7 +60,7 @@ const Footer = () => {
                 <Image src={logo} alt="logo"></Image>
               </div>
               <span>
-                MaxGen<span className="text-sky-400 font-light">Soft</span>
+                Oll<span className="text-sky-400 font-light">yex</span>
               </span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-6 pr-4">
@@ -146,7 +146,7 @@ const Footer = () => {
             <ul className="space-y-4 text-sm text-slate-400 mb-6">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-sky-400 shrink-0 mt-0.5" />
-                {/* <span>Sector 44, Tech Hub, Gurgaon, Haryana 122003, India</span> */}
+                <span>10745 W 115th ST Overland Park KANSAS, 66210</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-sky-400 shrink-0" />
@@ -154,7 +154,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-sky-400 shrink-0" />
-                <span>maxgensoft@gmail.com</span>
+                <span>Ollyex@gmail.com</span>
               </li>
             </ul>
 
@@ -188,7 +188,7 @@ const Footer = () => {
           </div>
 
           <p>
-            © {new Date().getFullYear()} MaxGenSoft Inc. All rights reserved.
+            © {new Date().getFullYear()} Ollyex Inc. All rights reserved.
           </p>
 
           <div className="flex items-center gap-6">

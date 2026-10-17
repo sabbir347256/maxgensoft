@@ -35,7 +35,7 @@ const About = () => {
             <div className="relative z-10 rounded-3xl overflow-hidden border border-slate-200/80 shadow-xl transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-sky-500/10 group-hover:border-sky-300">
               <Image
                 src="https://thenthbit.com/wp-content/uploads/2026/05/software-company-gurgaon.jpg.webp"
-                alt="About MaxGenSoft Engineering"
+                alt="About Ollyex Engineering"
                 width={700}
                 height={600}
                 className="w-full h-[450px] sm:h-[550px] object-cover transition-transform duration-700 ease-out group-hover:scale-110"
@@ -62,7 +62,7 @@ const About = () => {
 
           <div className="lg:col-span-6">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-sky-50 text-sky-600 border border-sky-200/60 mb-6 hover:bg-sky-100 hover:border-sky-300 transition-colors duration-300 cursor-pointer">
-              About MaxGenSoft
+              About Ollyex
             </span>
 
             <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight text-slate-900 mb-6">
@@ -73,7 +73,7 @@ const About = () => {
             </h2>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
-              At MaxGenSoft, we bridge the gap between complex technological
+              At Ollyex, we bridge the gap between complex technological
               challenges and sleek digital execution. We specialize in
               engineering high-performance platforms, automated cloud
               infrastructures, and custom software systems designed to scale
