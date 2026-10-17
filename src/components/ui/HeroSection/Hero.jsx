@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="relative md:h-[700px] h-[500px] w-full flex items-center justify-start overflow-hidden font-sans">
+    <section className="relative md:min-h-screen h-[500px] w-full flex items-center justify-start overflow-hidden">
       <Image
         src="https://thenthbit.com/wp-content/uploads/2026/05/software-company-gurgaon.jpg.webp"
         alt="Hero Background"
@@ -15,10 +15,10 @@ const Hero = () => {
       <div className="relative container z-10 w-full">
         <div className="max-w-4xl">
           <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight uppercase mb-6">
-            {/* We Sense Your Thoughts <br /> */}
-            <span className="text-sky-400">Ollyex: Before You Think We Tech</span>
+            Ollyex <br />
+            <span className="text-sky-400">Before You Think <br /> We Tech</span>
           </h1>
-          <p className="text-gray-300 text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed font-normal">
+          <p className="text-gray-300 text-sm sm:text-base md:text-2xl max-w-2xl leading-relaxed font-normal">
             Optimized Logic & Leading Excellence for Your Expansion
           </p>
         </div>
