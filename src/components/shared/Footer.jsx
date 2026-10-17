@@ -10,7 +10,7 @@ import {
   Cpu,
 } from "lucide-react";
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import logo from '../../../public/logo.jpeg';
+import logo from '../../../public/footer logo.jpeg';
 import Image from "next/image";
 
 const Footer = () => {
@@ -56,12 +56,12 @@ const Footer = () => {
               href="/"
               className="inline-flex gap-2 text-white font-extrabold text-2xl tracking-wide mb-6"
             >
-              <div className="w-9 h-9 rounded-xl mt-0.5">
-                <Image src={logo} alt="logo"></Image>
+              <div className=" rounded-xl mt-0.5">
+                <Image src={logo} className="size-14 rounded-md w-full " alt="logo"></Image>
               </div>
-              <span>
+              {/* <span>
                 Oll<span className="text-sky-400 font-light">yex</span>
-              </span>
+              </span> */}
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-6 pr-4">
               An enterprise software development company engineering scalable
@@ -146,7 +146,7 @@ const Footer = () => {
             <ul className="space-y-4 text-sm text-slate-400 mb-6">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-sky-400 shrink-0 mt-0.5" />
-                <span>10745 W 115th ST Overland Park KANSAS, 66210</span>
+                <span>10745 W 115th ST Overland Park KANSAS, 66210  USA</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-sky-400 shrink-0" />
