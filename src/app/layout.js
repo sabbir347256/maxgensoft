@@ -19,8 +19,8 @@ export const metadata = {
   title: "Ollyex",
   description: "Ollyex Official Website",
   icons: {
-    icon: "./logo.jpeg",
-    shortcut: "./logo.jpeg",
+    icon: "./icon.png",
+    shortcut: "./icon.png",
     apple: "/apple-icon.png",
   },
 };
