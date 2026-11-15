@@ -73,13 +73,14 @@ const Footer = () => {
                 { icon: FaGithub, href: "#" },
                 { icon: FaLinkedin, href: "#" },
                 { icon: FaTwitter, href: "#" },
-                { icon: FaFacebook, href: "#" },
+                { icon: FaFacebook, href: "https://www.facebook.com/OllyexUSA" },
               ].map((item, index) => {
                 const Icon = item.icon;
                 return (
                   <Link
                     key={index}
                     href={item.href}
+                    target='blank'
                     className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-sky-400 hover:border-sky-500/40 hover:bg-slate-800 transition-all duration-300"
                   >
                     <Icon className="w-4 h-4" />
