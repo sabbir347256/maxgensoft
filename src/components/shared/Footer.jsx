@@ -57,7 +57,7 @@ const Footer = () => {
               className="inline-flex gap-2 text-white font-extrabold text-2xl tracking-wide mb-6"
             >
               <div className="right-10">
-                <Image src={logo} className="size-14 rounded-md w-full " alt="logo"></Image>
+                <Image src={logo} className="size-13 rounded-md w-full mt-1" alt="logo"></Image>
               </div>
               {/* <span>
                 Oll<span className="text-sky-400 font-light">yex</span>
