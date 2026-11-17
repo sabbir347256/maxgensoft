@@ -56,7 +56,7 @@ const Footer = () => {
               href="/"
               className="inline-flex gap-2 text-white font-extrabold text-2xl tracking-wide mb-6"
             >
-              <div className=" rounded-xl mt-0.5">
+              <div className="right-10">
                 <Image src={logo} className="size-14 rounded-md w-full " alt="logo"></Image>
               </div>
               {/* <span>
