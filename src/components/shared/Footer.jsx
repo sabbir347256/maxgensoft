@@ -10,7 +10,7 @@ import {
   Cpu,
 } from "lucide-react";
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import logo from '../../../public/footer logo.jpeg';
+import logo from '../../../public/footer_logo.png';
 import Image from "next/image";
 
 const Footer = () => {
